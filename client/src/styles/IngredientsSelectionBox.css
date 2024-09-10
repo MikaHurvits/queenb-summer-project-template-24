@@ -1,0 +1,69 @@
+.ingredientsContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.combinedField {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: right;
+    /* gap: 1px; Add gap between elements */
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Add border around the combined field */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    padding: 10px; 
+}
+
+.mainInputs {
+    display: flex;
+    flex-direction:row; /* Stack inputs vertically */
+    /* gap: 1px; Add gap between inputs */
+    width: 100%; /* Ensure the main inputs take full width */
+}
+
+.selectInput, .textInput, .customInput {
+    /* padding: 5px; */
+    /* border: 1px solid #ccc; Add border to inputs */
+    /* border-radius: 5px; Add border radius to inputs */
+    outline: none; /* Remove outline on focus */
+    width: 50%; /* Ensure inputs take full width */
+}
+
+.addButton {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.ingredientsList {
+    margin-top: 20px;
+}
+
+.ingredientItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.removeButton {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

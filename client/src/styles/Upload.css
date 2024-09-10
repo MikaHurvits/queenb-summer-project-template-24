@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(254, 205, 227); /* Change this to your desired background color */
+    color: #333; /* Optional: Set a default text color */
+    font-family: cursive; /* Optional: Set a default font */
+    /* align-items: left; */
+}
+
+.container {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.form {
+    text-align: right;
+    display: block;
+    margin: 10px auto;
+}
+
+.textInput {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 20%;
+    height: 30px;
+}
+
+.uploadButton {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.selectInput {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 30%;
+}
+
+.selectedOption {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}

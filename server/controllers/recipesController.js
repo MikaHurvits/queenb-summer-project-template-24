@@ -7,7 +7,7 @@ const getAllRecipes = async (req, res) => {
         const recipes = await Recipe.find();
         res.status(200).json({recipes});
     } catch (err) {
-        res.status(400).json({msg: 'error getting recipes', err})
+        res.status(400).json({msg: 'Error getting recipes', err})
     }
 }
 

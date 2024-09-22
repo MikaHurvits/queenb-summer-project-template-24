@@ -3,10 +3,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const RecipeManager = require('./databaseManager/recipeManager');
+
 const recipesRoutes = require('./routes/recipes')
 const recipesFilterRoutes = require('./routes/recipesFilterRoute')
 const userRoutes = require('./routes/user');
-
+const uploadRoute = require('./routes.Upload');
 
 
 dotenv.config();
@@ -35,8 +36,9 @@ app.use((req, res, next) => {
 app.use('/api/recipes', recipesRoutes)
 app.use('/api/user', userRoutes)
 // app.use('/api/filter', recipesFilterRoutes) //todo - check what to keep
-
 app.use('/api/filter',recipesFilterRoutes);
+app.use('/api/upload', uploadRoute);
+
 
 
 // Connect to MongoDB

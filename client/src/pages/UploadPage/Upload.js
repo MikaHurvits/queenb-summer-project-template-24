@@ -1,4 +1,4 @@
-import './styles/Upload.css';
+import './Upload.css';
 import React, { useState } from 'react';
 
 const Upload = () => {

@@ -1,0 +1,10 @@
+.addButton {
+  margin-right: 30px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ff5943;
+  background-color: #ffffff;
+  border: 1px #0c0c0b solid;
+  border-radius: 6px;
+  width: 60px;
+  }
+

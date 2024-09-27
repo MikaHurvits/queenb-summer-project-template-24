@@ -1,34 +1,92 @@
 body {
     background-color: rgb(254, 205, 227); /* Change this to your desired background color */
     color: #333; /* Optional: Set a default text color */
-    font-family: cursive; /* Optional: Set a default font */
-    /* align-items: left; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.container {
+fieldset {
+
+    padding-bottom: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+.textInput {
+    margin: 10px;
+    height: 30px;
+}
+
+.ingredientsContainer{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+
+
+}
+.ingredientsContainer .selectBox {
+    height: 30px;
+    width: 150px;
+    margin: 5px;
+}
+
+.ingredientsContainer .smallTextBox {
+    height: 20px;
+    width: 15px;
+    margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+textarea {
+    height: 5em;
+    width: 25em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 20px;
-}
+    margin-right: 40px;
+} */
 
 .title {
-    color: blue;
+    color: #ff5943;
     margin-bottom: 20px;
 }
 
 .form {
-    text-align: right;
-    display: block;
+    text-align: center;
+    /* display: block; */
     margin: 10px auto;
 }
 
-.textInput {
-    display: block;
-    margin: 10px auto;
-    padding: 5px;
-    width: 20%;
-    height: 30px;
-}
 
 .uploadButton {
     background-color: green;
@@ -39,15 +97,15 @@ body {
     cursor: pointer;
 }
 
-.selectInput {
+/* .selectInput {
     display: block;
     margin: 10px auto;
     padding: 5px;
     width: 30%;
-}
-
+} */
+/* 
 .selectedOption {
     margin-top: 20px;
     font-size: 16px;
     color: #333;
-}
+} */

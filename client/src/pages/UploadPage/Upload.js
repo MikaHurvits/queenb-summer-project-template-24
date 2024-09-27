@@ -171,14 +171,16 @@ const createdBy = 'Mika check';
                 
                 <label>Recipe Title: </label>
                 <input 
+                className='textInput'
                 type="text"
                 name = "Title"
                 onChange = {(e) => setTitle(e.target.value)}
                 value = {title}
                 />
 
-
-            <p>Select category:</p>
+            <fieldset>
+                <legend>Select Category: </legend>
+            {/* <p>Select category:</p> */}
                 <label>
                     <input
                     type="radio"
@@ -189,6 +191,7 @@ const createdBy = 'Mika check';
                     />
                     Appetizer
                 </label>
+                <br/>
                 <label>
                     <input
                     type="radio"
@@ -199,6 +202,7 @@ const createdBy = 'Mika check';
                     />
                     Soup
                 </label>
+                <br/>
                 <label>
                     <input
                     type="radio"
@@ -209,6 +213,7 @@ const createdBy = 'Mika check';
                     />
                     Salad
                 </label>
+                <br/>
                 <label>
                     <input
                     type="radio"
@@ -219,6 +224,7 @@ const createdBy = 'Mika check';
                     />
                     Main Course
                 </label>
+                <br/>
                 <label>
                     <input
                     type="radio"
@@ -229,6 +235,7 @@ const createdBy = 'Mika check';
                     />
                     Side Dish
                 </label>
+                <br/>
                 <label>
                     <input
                     type="radio"
@@ -239,28 +246,30 @@ const createdBy = 'Mika check';
                     />
                     Dessert
                 </label>
-
+                
                 {/* Display the selected category */}
                 <p>Selected Category: {selectedCategory}</p>
+                </fieldset>
 
 
 
-                <p>
+                <div>
                 <label>Total time in minutes: </label>
                 <input 
+                className='textInput'
                 type="number"
                 name = "totalTime"
                 onChange = {(e) => setTotalTime(e.target.value)}
                 value = {totalTime}
                 />
-                </p>
+                </div>
 
                 <p className='ingredientsContainer'>
 
                 {/* <div className="ingredientsContainer"> */}
                 
                 <label>Ingredients List: </label>
-                <select placeholder="Ingredient " label="Ingredient" value={selectedIngredient} onChange={handleIngredientChange}>
+                <select placeholder="Ingredient " label="Ingredient" value={selectedIngredient} onChange={handleIngredientChange} className='selectBox'>
                     <option style={{color: 'red'}} value="" disabled> Select Ingredient </option>
                     {predefinedIngredients.map((ingredient) => (
                         <option value={ingredient}> {ingredient} </option>
@@ -269,15 +278,16 @@ const createdBy = 'Mika check';
                 </select>
                 {selectedIngredient === 'Other' && (
                     <input
+                        className='selectBox'
                         type="text"
                         placeholder="Enter Ingredient"
                         value={customIngredient}
                         onChange={handleCustomIngredientChange}
                     />
                 )}
-
-                <input
                 
+                <input
+                    className='smallTextBox'
                     type="number"
                     label="Quantity"
                     placeholder="Quantity"
@@ -286,7 +296,7 @@ const createdBy = 'Mika check';
                 />
  
                 {/* <label>Select Unit: </label> */}
-                <select value={selectedUnit} onChange={handleUnitChange}>
+                <select value={selectedUnit} onChange={handleUnitChange} className='selectBox'>
                     <option value="" disabled> Select Unit</option>
                     {unitsList.map((unit) => (
                         <option value={unit}>{unit}</option>
@@ -318,8 +328,8 @@ const createdBy = 'Mika check';
                 </div>
                 </p>
        
-                <p>
-                <label>Instructions: </label>
+                <textarea id="Instructions">
+                {/* <label>Instructions: </label> */}
                     <input 
                     type="text"
                     className='instructionBox'
@@ -327,7 +337,7 @@ const createdBy = 'Mika check';
                     onChange = {(e) => setInstructions(e.target.value)}
                     value = {instructions}
                     />
-                </p>
+                </textarea>
 
 
                 {/*needs to add an image alss*/}

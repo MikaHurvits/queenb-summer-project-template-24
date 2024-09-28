@@ -7,7 +7,7 @@ const RecipeManager = require('./databaseManager/recipeManager');
 const recipesRoutes = require('./routes/recipes')
 const recipesFilterRoutes = require('./routes/recipesFilterRoute')
 const userRoutes = require('./routes/user');
-const uploadRoute = require('./routes.Upload');
+const uploadRoute = require('./routes.upload');
 
 
 dotenv.config();

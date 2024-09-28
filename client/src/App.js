@@ -10,6 +10,8 @@ import { useAuthContext } from './hooks/useAuthContext';
 import { useLogout } from './hooks/useLogout';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Upload from './pages/UploadPage/Upload';
+
 
 function App() {
   const { user } = useAuthContext();
@@ -36,6 +38,9 @@ function App() {
               <>
                 <Link to="/login" className={styles.appLink}>Login</Link>
                 <Link to="/signup" className={styles.appLink}>Signup</Link>
+                {/* only or testing */}
+                {/* <button className={styles.addButton}>Add Recipe</button> */}
+                <Link to="/upload" className={styles.addButton}>Upload</Link> 
               </>
             )}
           </nav>
@@ -60,6 +65,8 @@ function App() {
 
                 <Route path="/recipes/:recipeName" element={<RecipePage />} />
                 <Route path="/recipes/category/:title" element={<CategoryPage />} />
+                
+                <Route path="/upload" element={<Upload />} />
 
               </Routes>
             </div>

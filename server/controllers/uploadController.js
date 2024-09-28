@@ -1,7 +1,7 @@
 const Recipe = require('../models/RecipeModel');
 const Category = require('../models/CategoryModel');
 const Ingredient = require('../models/IngredientModel');
-const User = require('../models/UserModel');
+
 
 
 // creating a new recipe for the Recipes Collection

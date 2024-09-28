@@ -1,10 +1,4 @@
 const express = require('express');
-// const {
-
-//   getAllRecipes,
-//   addRecipe,
-//   deleteRecipe
-// } = require('../controllers/RecipesController');
 const requireAuth = require('../middleware/requireAuth'); // Import the middleware
 
   const {  getAllRecipes,

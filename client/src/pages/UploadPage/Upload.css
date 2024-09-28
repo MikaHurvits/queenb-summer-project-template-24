@@ -16,9 +16,14 @@ fieldset {
     height: 30px;
 }
 
+
+
+
+
+
 .ingredientsContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* width: 100%; */
 
 
@@ -27,22 +32,42 @@ fieldset {
     height: 30px;
     width: 150px;
     margin: 5px;
+    padding-block: 1px;
+    padding-inline: 2px;
 }
 
 .ingredientsContainer .smallTextBox {
-    height: 20px;
-    width: 15px;
+    height: 24px;
+    width: 100px;
     margin: 5px;
+    padding-block: 1px;
+    padding-inline: 2px;
 }
 
 
+.ingredientsContainer button {
+    height: 24px;
+    width: 109px;
+    margin: 5px;
+    margin-left: 20px;
+}
+
+.indredientsList .choiceContainer {
+    display: flex;
+    flex-direction: row;
+}
 
 
+.ingredientItem {
+    margin: 0px;
+    padding: 0px;
 
+}
 
-
-
-
+.indredientsList{
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -55,8 +80,6 @@ textarea {
     width: 25em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-
 
 
 

@@ -1,0 +1,25 @@
+.ingredientsContainer .selectBox {
+    height: 30px;
+    width: 150px;
+    margin: 5px;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.ingredientsContainer .smallTextBox {
+    height: 24px;
+    width: 100px;
+    margin: 5px;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+
+.ingredientsContainer button {
+    height: 24px;
+    width: 109px;
+    margin: 5px;
+    margin-left: 20px;
+}
+
+

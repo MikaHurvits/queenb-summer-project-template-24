@@ -1,7 +1,28 @@
-.home {
+/* .home {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+} */
+
+.home {
+  text-align: center;
+  padding: 20px;
+  padding-left: 60px;
+}
+
+
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.loading {
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 50px;
+  height: auto;
+  border: 0px solid;
 }

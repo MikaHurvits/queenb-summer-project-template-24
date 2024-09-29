@@ -1,5 +1,5 @@
   .RecipePage {
-    margin-left: 205px; /* Increased left margin to accommodate filter bar width plus its margin */
+    margin-left: 20px;
     max-width: calc(100% - 205px); /* Adjusting max-width to prevent overflow */
     margin-top: 40px;
     margin-right: 40px;
@@ -45,7 +45,7 @@
   .ingredients li, .instructions li {
     margin-bottom: 10px;
     padding-left: 15px;
-    text-indent: -15px;
+    text-indent: -10px;
   }
   
   .ingredients li::before, li::before {

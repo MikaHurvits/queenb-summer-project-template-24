@@ -71,13 +71,13 @@
 .contentContainer {
   width: 90%; /* Adjust the width of the content to take more space */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: flex-start;
   padding-top: 20px;
 }
 
 .footer {
-  background-color: #4e1001; /* Purple color */
+  background-color: #4e1001;
   color: white;
   position: fixed;
   width: 100%;

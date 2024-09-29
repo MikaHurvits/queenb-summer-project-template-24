@@ -1,0 +1,34 @@
+{
+    "title": "Spicy Roasted Chickpeas",
+    "categories": ["Side Dishes"],
+    "imageUrl": "https://food-images.files.bbci.co.uk/food/recipes/smoky_baked_chickpeas_64515_16x9.jpg",
+    "ingredients": [
+      {
+        "ingredient": "Canned chickpeas",
+        "quantity": "1 can, drained and rinsed"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Cayenne pepper",
+        "quantity": "1 teaspoon"
+      },
+      {
+        "ingredient": "Paprika",
+        "quantity": "1 teaspoon"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Preheat oven to 400°F (200°C).",
+      "Toss chickpeas with olive oil, cayenne, paprika, and salt.",
+      "Spread on a baking sheet and roast for 20-25 minutes until crispy."
+    ],
+    "createdBy": null
+}

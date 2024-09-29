@@ -8,8 +8,6 @@ const recipesRoutes = require('./routes/recipes')
 const recipesFilterRoutes = require('./routes/recipesFilterRoute')
 const userRoutes = require('./routes/user');
 
-
-
 dotenv.config();
 
 // Constants
@@ -17,7 +15,6 @@ const PORT = process.env.PORT || 5000;
 
 // Create Express server
 const app = express();
-
 
 // Middleware
 app.use(express.json())
@@ -33,14 +30,13 @@ app.use((req, res, next) => {
 })
 
 // Routes
-// app.use('/api/rubberDucks', rubberDucksRoutes)
+//app.use('/api/searchBar', nonMandatoryAuth, searchBarRoutes)
 app.use('/api/searchBar', searchBarRoutes)
 app.use('/api/recipes', recipesRoutes)
 app.use('/api/user', userRoutes)
 // app.use('/api/filter', recipesFilterRoutes) //todo - check what to keep
 
 app.use('/api/filter',recipesFilterRoutes);
-
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)

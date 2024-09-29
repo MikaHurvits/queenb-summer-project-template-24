@@ -62,7 +62,8 @@ function SearchBar() {
         return;
       }
       const response = await axiosInstance.get('/searchBar', {params: {key: searchKey}});
-      setSearchResult(response.data);
+      const searchResults = response.data.map(recipe => highlightMatch(recipe.title, searchKey));
+      setSearchResult(searchResults);
       console.log(response.data);
     } catch (error) {
       console.error('Error fetching search results:', error);
@@ -110,7 +111,7 @@ function SearchBar() {
             {searchResult.map((recipe) => (
               <button className={styles.searchItem} key={recipe._id} onClick={(e) => { e.preventDefault(); handleRecipeClick(recipe); }}>
                 <h3 className={styles.searchItemText}>
-                  {highlightMatch(recipe.title, key)}
+                  {recipe}
                 </h3>
               </button>
             ))}

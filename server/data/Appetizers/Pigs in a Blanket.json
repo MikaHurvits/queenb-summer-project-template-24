@@ -1,0 +1,30 @@
+{
+    "title": "Pigs in a Blanket",
+    "categories": ["Appetizers"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIvoZiZ22yabSl0mrm4gK2XkU4b976Q7iemg&s",
+    "ingredients": [
+      {
+        "ingredient": "Cocktail sausages",
+        "quantity": "1 package"
+      },
+      {
+        "ingredient": "Puff pastry",
+        "quantity": "1 sheet, thawed"
+      },
+      {
+        "ingredient": "Egg wash",
+        "quantity": "1 egg, beaten"
+      }
+    ],
+    "totalTime": 20,
+    "instructions": [
+      "Preheat oven to 400°F (200°C).",
+      "Cut puff pastry into small squares.",
+      "Wrap each cocktail sausage in a square of puff pastry and place on a baking sheet.",
+      "Brush with egg wash.",
+      "Bake for 15-20 minutes until golden brown.",
+      "Serve warm."
+    ],
+    "createdBy": null
+}
+  

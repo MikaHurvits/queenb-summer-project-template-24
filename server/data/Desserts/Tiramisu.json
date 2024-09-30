@@ -1,0 +1,48 @@
+{
+    "title": "Tiramisu",
+    "categories": ["Desserts"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnplY0BMsrL9QLjanNtAx20i8NOpliK0UhKw&s",
+    "ingredients": [
+      {
+        "ingredient": "Mascarpone cheese",
+        "quantity": "8 oz"
+      },
+      {
+        "ingredient": "Sugar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Egg yolks",
+        "quantity": "4"
+      },
+      {
+        "ingredient": "Heavy cream",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Coffee",
+        "quantity": "1 cup, cooled"
+      },
+      {
+        "ingredient": "Ladyfingers",
+        "quantity": "24"
+      },
+      {
+        "ingredient": "Cocoa powder",
+        "quantity": "2 tablespoons"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Whisk egg yolks and sugar until pale and thick.",
+      "Fold in mascarpone cheese until smooth.",
+      "In another bowl, whip cream until stiff peaks form.",
+      "Gently fold whipped cream into mascarpone mixture.",
+      "Dip ladyfingers in coffee and layer in a dish.",
+      "Spread half the mascarpone mixture over ladyfingers.",
+      "Repeat layers and dust with cocoa powder.",
+      "Chill for at least 4 hours before serving."
+    ],
+    "createdBy": null
+}
+  

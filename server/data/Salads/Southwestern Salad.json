@@ -1,0 +1,47 @@
+{
+    "title": "Southwestern Salad",
+    "categories": ["Salads"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpK8r7W6KOn4SgyAlT4lLav5x9kFb9sMZPA&s",
+    "ingredients": [
+      {
+        "ingredient": "Romaine lettuce",
+        "quantity": "3 cups, chopped"
+      },
+      {
+        "ingredient": "Black beans",
+        "quantity": "1 cup, drained and rinsed"
+      },
+      {
+        "ingredient": "Corn kernels",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Red bell pepper",
+        "quantity": "1, diced"
+      },
+      {
+        "ingredient": "Cherry tomatoes",
+        "quantity": "1 cup, halved"
+      },
+      {
+        "ingredient": "Avocado",
+        "quantity": "1, diced"
+      },
+      {
+        "ingredient": "Cilantro",
+        "quantity": "1/4 cup, chopped"
+      },
+      {
+        "ingredient": "Lime vinaigrette",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "totalTime": 15,
+    "instructions": [
+      "Combine romaine lettuce, black beans, corn, red bell pepper, cherry tomatoes, avocado, and cilantro in a bowl.",
+      "Drizzle with lime vinaigrette and toss gently.",
+      "Serve immediately."
+    ],
+    "createdBy": null
+}
+  

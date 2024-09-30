@@ -1,0 +1,43 @@
+{
+    "title": "Spaghetti Carbonara",
+    "categories": ["Main Courses"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnQFigSWxvCNewhcFeJRgnyQAFrCACHK5yWQ&s",
+    "ingredients": [
+      {
+        "ingredient": "Spaghetti",
+        "quantity": "12 oz"
+      },
+      {
+        "ingredient": "Eggs",
+        "quantity": "3 large"
+      },
+      {
+        "ingredient": "Parmesan cheese",
+        "quantity": "1 cup, grated"
+      },
+      {
+        "ingredient": "Bacon",
+        "quantity": "6 strips, cooked and crumbled"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+      },
+      {
+        "ingredient": "Black pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Cook spaghetti according to package instructions.",
+      "In a bowl, whisk together eggs and Parmesan cheese.",
+      "In a pan, cook garlic in bacon fat until fragrant.",
+      "Add cooked spaghetti to the pan and toss to coat.",
+      "Remove from heat and quickly stir in the egg mixture.",
+      "Add crumbled bacon and black pepper.",
+      "Serve immediately."
+    ],
+    "createdBy": null
+}
+  

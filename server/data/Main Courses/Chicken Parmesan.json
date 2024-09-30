@@ -1,0 +1,42 @@
+{
+    "title": "Chicken Parmesan",
+    "categories": ["Main Courses"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPl_GFBv9vjHvz2K7gNhTZELLDC-oiX6JXg&s",
+    "ingredients": [
+      {
+        "ingredient": "Chicken breasts",
+        "quantity": "4, boneless and skinless"
+      },
+      {
+        "ingredient": "Bread crumbs",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Parmesan cheese",
+        "quantity": "1/2 cup, grated"
+      },
+      {
+        "ingredient": "Marinara sauce",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Mozzarella cheese",
+        "quantity": "1 cup, shredded"
+      },
+      {
+        "ingredient": "Eggs",
+        "quantity": "2, beaten"
+      }
+    ],
+    "totalTime": 40,
+    "instructions": [
+      "Preheat oven to 375°F (190°C).",
+      "Dip chicken breasts in beaten eggs, then coat with a mixture of bread crumbs and Parmesan cheese.",
+      "Place in a baking dish and bake for 20 minutes.",
+      "Top each piece with marinara sauce and mozzarella cheese.",
+      "Return to oven and bake for an additional 10 minutes until cheese is melted and bubbly.",
+      "Serve with pasta or a side salad."
+    ],
+    "createdBy": null
+}
+  

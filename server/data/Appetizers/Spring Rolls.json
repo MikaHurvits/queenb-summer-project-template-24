@@ -1,0 +1,41 @@
+{
+    "title": "Spring Rolls",
+    "categories": ["Appetizers"],
+    "imageUrl": "https://w7.pngwing.com/pngs/917/998/png-transparent-plate-of-spring-rolls-spring-roll-indian-cuisine-vegetarian-cuisine-chaat-dosa-vegetable-food-recipe-cooking-thumbnail.png",
+    "ingredients": [
+      {
+        "ingredient": "Spring roll wrappers",
+        "quantity": "10"
+      },
+      {
+        "ingredient": "Shrimp",
+        "quantity": "1/2 lb, peeled and deveined"
+      },
+      {
+        "ingredient": "Rice noodles",
+        "quantity": "1 cup, cooked"
+      },
+      {
+        "ingredient": "Julienned vegetables (carrots, cucumber)",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Fresh cilantro",
+        "quantity": "1/4 cup"
+      },
+      {
+        "ingredient": "Hoisin sauce",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Cook shrimp and rice noodles according to package instructions.",
+      "Place a spring roll wrapper in warm water until soft.",
+      "Lay out wrapper on a flat surface and layer with shrimp, rice noodles, vegetables, and cilantro.",
+      "Roll up tightly and seal edges.",
+      "Serve with hoisin sauce."
+    ],
+    "createdBy": null
+}
+  

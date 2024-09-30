@@ -1,0 +1,40 @@
+{
+    "title": "Waldorf Salad",
+    "categories": ["Salads"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSat2YKP-pXIkiTDQjrnIVJT9EL3SamWQPO3Q&s",
+    "ingredients": [
+      {
+        "ingredient": "Apples",
+        "quantity": "2, diced"
+      },
+      {
+        "ingredient": "Celery",
+        "quantity": "2 stalks, diced"
+      },
+      {
+        "ingredient": "Walnuts",
+        "quantity": "1/2 cup, chopped"
+      },
+      {
+        "ingredient": "Grapes",
+        "quantity": "1 cup, halved"
+      },
+      {
+        "ingredient": "Mayonnaise",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Lemon juice",
+        "quantity": "1 tablespoon"
+      }
+    ],
+    "totalTime": 15,
+    "instructions": [
+      "In a large bowl, combine apples, celery, walnuts, and grapes.",
+      "In a small bowl, mix together mayonnaise and lemon juice.",
+      "Pour dressing over the salad and toss gently.",
+      "Serve immediately or chilled."
+    ],
+    "createdBy": null
+}
+  

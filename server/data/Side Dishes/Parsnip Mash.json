@@ -1,0 +1,29 @@
+{
+    "title": "Parsnip Mash",
+    "categories": ["Side Dishes"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3LAvic0gu-CX08FDKGQJDhYK8SVsCZ_wE_g&s",
+    "ingredients": [
+      {
+        "ingredient": "Parsnips",
+        "quantity": "2 lbs, peeled and chopped"
+      },
+      {
+        "ingredient": "Butter",
+        "quantity": "1/4 cup"
+      },
+      {
+        "ingredient": "Heavy cream",
+        "quantity": "1/4 cup"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Boil parsnips until tender, about 15 minutes.",
+      "Drain and mash with butter, cream, and salt."
+    ],
+    "createdBy": null
+}

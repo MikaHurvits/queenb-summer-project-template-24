@@ -1,0 +1,43 @@
+{
+    "title": "Lemon Bars",
+    "categories": ["Desserts"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT31yRWL-cB35-EaC9000rjXwW62UtBXQnmWA&s",
+    "ingredients": [
+      {
+        "ingredient": "Butter",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Sugar",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Flour",
+        "quantity": "1 1/2 cups"
+      },
+      {
+        "ingredient": "Eggs",
+        "quantity": "4"
+      },
+      {
+        "ingredient": "Lemon juice",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Powdered sugar",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "totalTime": 45,
+    "instructions": [
+      "Preheat oven to 350°F (175°C).",
+      "Mix butter and sugar, then stir in flour.",
+      "Press mixture into the bottom of a baking dish and bake for 20 minutes.",
+      "Whisk together eggs, lemon juice, and sugar.",
+      "Pour over the baked crust and return to oven.",
+      "Bake for an additional 20 minutes.",
+      "Cool completely and dust with powdered sugar before serving."
+    ],
+    "createdBy": null
+}
+  

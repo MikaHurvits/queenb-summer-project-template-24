@@ -1,0 +1,35 @@
+{
+    "title": "Curried Cauliflower",
+    "categories": ["Side Dishes"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6YLRXLexln1U56SMu8zIWIDh3pFx3O47K5g&s",
+    "ingredients": [
+      {
+        "ingredient": "Cauliflower",
+        "quantity": "1 head, cut into florets"
+      },
+      {
+        "ingredient": "Curry powder",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Coconut milk",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Preheat oven to 425°F (220°C).",
+      "Toss cauliflower with olive oil, curry powder, and salt.",
+      "Spread on a baking sheet and roast for 20 minutes.",
+      "Drizzle with coconut milk before serving."
+    ],
+    "createdBy": null
+}

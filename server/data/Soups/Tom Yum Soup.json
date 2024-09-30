@@ -1,0 +1,62 @@
+{
+    "title": "Tom Yum Soup",
+    "categories": ["Soups"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrC1tFrv-akVXcyTT5iry1LQ-oh8GiiGcLWA&s",
+    "ingredients": [
+      {
+        "ingredient": "Shrimp",
+        "quantity": "200g, peeled and deveined"
+      },
+      {
+        "ingredient": "Mushrooms",
+        "quantity": "100g, sliced"
+      },
+      {
+        "ingredient": "Chicken broth",
+        "quantity": "500ml"
+      },
+      {
+        "ingredient": "Lemongrass",
+        "quantity": "1 stalk, bruised and chopped"
+      },
+      {
+        "ingredient": "Galangal",
+        "quantity": "2 slices"
+      },
+      {
+        "ingredient": "Kaffir lime leaves",
+        "quantity": "3"
+      },
+      {
+        "ingredient": "Thai chili paste",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Fish sauce",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Lime juice",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Cilantro",
+        "quantity": "for garnish"
+      },
+      {
+        "ingredient": "Thai chilies",
+        "quantity": "2, crushed (optional, for extra heat)"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Bring chicken broth to a boil in a large pot.",
+      "Add lemongrass, galangal, and kaffir lime leaves, and simmer for 5 minutes.",
+      "Stir in the Thai chili paste, fish sauce, and lime juice.",
+      "Add shrimp and mushrooms, and cook for another 3-5 minutes until shrimp are cooked through.",
+      "Garnish with cilantro and extra Thai chilies if desired.",
+      "Serve hot."
+    ],
+    "createdBy": null
+}
+  

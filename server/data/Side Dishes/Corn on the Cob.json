@@ -1,0 +1,27 @@
+{
+    "title": "Corn on the Cob",
+    "categories": ["Side Dishes"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS69SFvJx3dEjIGsjN4-HrCZhrsZssWydZ-cA&s",
+    "ingredients": [
+      {
+        "ingredient": "Corn cobs",
+        "quantity": "4"
+      },
+      {
+        "ingredient": "Butter",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 15,
+    "instructions": [
+      "Boil corn in salted water for 10-12 minutes.",
+      "Drain and brush with melted butter.",
+      "Season with salt and serve."
+    ],
+    "createdBy": null
+}
+  

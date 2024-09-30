@@ -1,0 +1,56 @@
+{
+    "title": "Chocolate Chip Cookies",
+    "categories": ["Desserts"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQB349b3HRQqYFiIZ9NRgCezmvmuDQrucU9Q&s",
+    "ingredients": [
+      {
+        "ingredient": "Butter",
+        "quantity": "1 cup, softened"
+      },
+      {
+        "ingredient": "Sugar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Brown sugar",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Eggs",
+        "quantity": "2"
+      },
+      {
+        "ingredient": "Vanilla extract",
+        "quantity": "1 teaspoon"
+      },
+      {
+        "ingredient": "Flour",
+        "quantity": "2 1/4 cups"
+      },
+      {
+        "ingredient": "Baking soda",
+        "quantity": "1/2 teaspoon"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "1/2 teaspoon"
+      },
+      {
+        "ingredient": "Chocolate chips",
+        "quantity": "1 cup"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Preheat oven to 375°F (190°C).",
+      "Cream together butter, sugar, and brown sugar.",
+      "Beat in eggs and vanilla extract.",
+      "In another bowl, mix flour, baking soda, and salt.",
+      "Gradually add to butter mixture.",
+      "Stir in chocolate chips.",
+      "Drop spoonfuls onto baking sheets and bake for 10-12 minutes.",
+      "Cool on wire racks."
+    ],
+    "createdBy": null
+}
+  

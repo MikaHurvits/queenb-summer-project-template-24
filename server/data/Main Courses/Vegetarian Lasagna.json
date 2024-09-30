@@ -1,0 +1,43 @@
+{
+    "title": "Vegetarian Lasagna",
+    "categories": ["Main Courses"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQefRD40udmCMUJx5Dow-Xfu64E-8PuFSsuMA&s",
+    "ingredients": [
+      {
+        "ingredient": "Lasagna noodles",
+        "quantity": "12"
+      },
+      {
+        "ingredient": "Ricotta cheese",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Mozzarella cheese",
+        "quantity": "2 cups, shredded"
+      },
+      {
+        "ingredient": "Marinara sauce",
+        "quantity": "2 cups"
+      },
+      {
+        "ingredient": "Spinach",
+        "quantity": "1 cup, chopped"
+      },
+      {
+        "ingredient": "Zucchini",
+        "quantity": "1, sliced"
+      }
+    ],
+    "totalTime": 60,
+    "instructions": [
+      "Preheat oven to 375°F (190°C).",
+      "Cook lasagna noodles according to package instructions.",
+      "In a baking dish, layer noodles, ricotta cheese, mozzarella cheese, marinara sauce, spinach, and zucchini.",
+      "Repeat layers and end with a layer of cheese.",
+      "Cover with foil and bake for 40 minutes.",
+      "Remove foil and bake for an additional 10 minutes until cheese is bubbly and golden.",
+      "Let cool before serving."
+    ],
+    "createdBy": null
+}
+  

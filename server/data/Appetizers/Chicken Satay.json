@@ -1,0 +1,40 @@
+{
+    "title": "Chicken Satay",
+    "categories": ["Appetizers"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXq6VFDACR0_2xawiiSEq-G9Pi5ZZj9bNxkg&s",
+    "ingredients": [
+      {
+        "ingredient": "Chicken breasts",
+        "quantity": "1 lb, cut into strips"
+      },
+      {
+        "ingredient": "Coconut milk",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Soy sauce",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Brown sugar",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+      },
+      {
+        "ingredient": "Ginger",
+        "quantity": "1 tablespoon, minced"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "In a bowl, combine coconut milk, soy sauce, brown sugar, garlic, and ginger.",
+      "Marinate chicken strips in the mixture for at least 30 minutes.",
+      "Thread chicken onto skewers and grill over medium heat for 5-7 minutes per side.",
+      "Serve with peanut sauce or your preferred dip."
+    ],
+    "createdBy": null
+}
+  

@@ -1,0 +1,43 @@
+{
+    "title": "Beef Stroganoff",
+    "categories": ["Main Courses"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujVQ9WtZsjX-BilfWaPhRg8sZmp323okfCQ&s",
+    "ingredients": [
+      {
+        "ingredient": "Beef sirloin",
+        "quantity": "1 lb, thinly sliced"
+      },
+      {
+        "ingredient": "Mushrooms",
+        "quantity": "1 cup, sliced"
+      },
+      {
+        "ingredient": "Onion",
+        "quantity": "1, chopped"
+      },
+      {
+        "ingredient": "Beef broth",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Sour cream",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Flour",
+        "quantity": "2 tablespoons"
+      }
+    ],
+    "totalTime": 45,
+    "instructions": [
+      "In a pan, brown beef over medium heat and set aside.",
+      "In the same pan, cook onions and mushrooms until tender.",
+      "Stir in flour and cook for 1 minute.",
+      "Add beef broth and bring to a simmer.",
+      "Return beef to the pan and cook until sauce thickens.",
+      "Stir in sour cream and cook until heated through.",
+      "Serve over noodles or rice."
+    ],
+    "createdBy": null
+}
+  

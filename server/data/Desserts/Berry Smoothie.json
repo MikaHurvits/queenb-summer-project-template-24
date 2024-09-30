@@ -1,0 +1,30 @@
+{
+    "title": "Berry Smoothie",
+    "categories": ["Desserts"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ54liH_K7VuZIpU5mDbzRF4VcJPnZSRRS0Og&s",
+    "ingredients": [
+      {
+        "ingredient": "Mixed berries",
+        "quantity": "2 cups"
+      },
+      {
+        "ingredient": "Banana",
+        "quantity": "1"
+      },
+      {
+        "ingredient": "Greek yogurt",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Honey",
+        "quantity": "2 tablespoons"
+      }
+    ],
+    "totalTime": 5,
+    "instructions": [
+      "Blend all ingredients until smooth.",
+      "Pour into glasses and serve immediately."
+    ],
+    "createdBy": null
+}
+  

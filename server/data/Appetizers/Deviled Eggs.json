@@ -1,0 +1,41 @@
+{
+    "title": "Deviled Eggs",
+    "categories": ["Appetizers"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjyG3BcR-AY1U_csUSIUNsyCtOMZrg6KPsQQ&s",
+    "ingredients": [
+      {
+        "ingredient": "Eggs",
+        "quantity": "6, hard-boiled and peeled"
+      },
+      {
+        "ingredient": "Mayonnaise",
+        "quantity": "1/4 cup"
+      },
+      {
+        "ingredient": "Dijon mustard",
+        "quantity": "1 tablespoon"
+      },
+      {
+        "ingredient": "Paprika",
+        "quantity": "1/2 teaspoon"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      },
+      {
+        "ingredient": "Black pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 15,
+    "instructions": [
+      "Cut eggs in half lengthwise and remove yolks.",
+      "In a bowl, mash yolks with mayonnaise, Dijon mustard, paprika, salt, and pepper.",
+      "Spoon or pipe mixture back into egg whites.",
+      "Garnish with additional paprika if desired.",
+      "Serve chilled."
+    ],
+    "createdBy": null
+}
+  

@@ -1,0 +1,42 @@
+{
+    "title": "Vegetable Stir-Fry",
+    "categories": ["Main Courses"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcQJbRkKQg6Kj82B1CbSSCjmtB80BtR1r6g&s",
+    "ingredients": [
+      {
+        "ingredient": "Mixed vegetables",
+        "quantity": "4 cups (e.g., bell peppers, broccoli, carrots)"
+      },
+      {
+        "ingredient": "Soy sauce",
+        "quantity": "1/4 cup"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+      },
+      {
+        "ingredient": "Ginger",
+        "quantity": "1 tablespoon, minced"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Sesame seeds",
+        "quantity": "1 tablespoon"
+      }
+    ],
+    "totalTime": 20,
+    "instructions": [
+      "In a pan, heat olive oil over medium heat.",
+      "Add garlic and ginger and cook until fragrant.",
+      "Add mixed vegetables and stir-fry until tender-crisp.",
+      "Add soy sauce and stir to coat.",
+      "Sprinkle with sesame seeds before serving.",
+      "Serve over rice or noodles."
+    ],
+    "createdBy": null
+}
+  

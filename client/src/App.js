@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/HomePage/HomePage';
+import SearchBar from './components/common/SearchBar/SearchBar';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import RecipePage from './pages/RecipePage/RecipePage';
 import styles from './styles/App.module.css';
@@ -41,11 +42,11 @@ function App() {
           </nav>
         </header>
 
-        <div className={styles.searchAndFilter}>
+        <div className={styles.searchBar}>
           <AppNav />
-          <span>
-            <input placeholder='Search Recipe' className={styles.searchInput} />
-          </span>
+          <div>
+            <SearchBar />
+          </div>
         </div>
         <main className={styles.main}>
           <div className={styles.leftSide}></div> {/* Left pink section */}

@@ -62,7 +62,7 @@ function SearchBar() {
         return;
       }
       const response = await axiosInstance.get('/searchBar', {params: {key: searchKey}});
-      const searchResults = response.data.map(recipe => highlightMatch(recipe.title, searchKey));
+      const searchResults = response.data.map(recipe => [recipe, highlightMatch(recipe.title, searchKey)]);
       setSearchResult(searchResults);
       console.log(response.data);
     } catch (error) {
@@ -108,10 +108,10 @@ function SearchBar() {
         {/* Display search results if available */}
         {searchResult && searchResult.length > 0 && (
           <div className={styles.searchResult} ref={searchResultRef}>
-            {searchResult.map((recipe) => (
+            {searchResult.map(([recipe, highlight]) => (
               <button className={styles.searchItem} key={recipe._id} onClick={(e) => { e.preventDefault(); handleRecipeClick(recipe); }}>
                 <h3 className={styles.searchItemText}>
-                  {recipe}
+                  {highlight}
                 </h3>
               </button>
             ))}

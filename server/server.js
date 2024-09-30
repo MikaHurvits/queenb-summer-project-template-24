@@ -37,7 +37,7 @@ app.use('/api/recipes', recipesRoutes)
 app.use('/api/filter', recipesFilterRoutes) 
 app.use('/api/user', userRoutes)
 
-app.use('/api/filter',recipesFilterRoutes);
+//app.use('/api/filter',recipesFilterRoutes);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)

@@ -17,7 +17,7 @@ const Upload = () => {
 
     const [instructions, setInstructions] = useState('');
 
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState('');
 
     const [error, setError] = useState('');
 
@@ -50,7 +50,7 @@ const createdBy = 'Mika check';
         formData.append('image', image); // Use the file object directly
         
         console.log(formData);
-        
+
         try {
             const response = await fetch('/api/upload', {
                 method: 'POST',

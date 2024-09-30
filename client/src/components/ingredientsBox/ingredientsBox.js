@@ -69,7 +69,8 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
 
         const ingredient = selectedIngredient === 'Other' ? customIngredient : selectedIngredient;
         const unit = selectedUnit === 'Other' ? customUnit : selectedUnit;
-        const newIngredient = { ingredient, quantity: selectedQuantity, unit};
+        const quantity = selectedQuantity.toString(); // Convert quantity to string if needed
+        const newIngredient = { ingredient, quantity, unit};
         
         setIngredientsList([...ingredientsList, newIngredient]);
 
@@ -93,14 +94,14 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
     return (
     
 
-                <p className='ingredientsContainer'>
+                <div className='ingredientsContainer'>
                 
                 <label>Ingredients List: </label>
                 <div className='choiceContainer'> 
                 <select placeholder="Ingredient " label="Ingredient" value={selectedIngredient} onChange={handleIngredientChange} className='selectBox'>
                     <option style={{color: 'red'}} value="" disabled> Select Ingredient </option>
-                    {predefinedIngredients.map((ingredient) => (
-                        <option value={ingredient}> {ingredient} </option>
+                    {predefinedIngredients.map((ingredient, index) => (
+                        <option key={index} value={ingredient}> {ingredient} </option>
                     ))}
                     <option value="Other">Other</option>
                 </select>
@@ -129,8 +130,8 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
 
                 <select value={selectedUnit} onChange={handleUnitChange} className='selectBox'>
                     <option value="" disabled> Select Unit</option>
-                    {unitsList.map((unit) => (
-                        <option value={unit}>{unit}</option>
+                    {unitsList.map((unit, index) => (
+                        <option key={index} value={unit}>{unit}</option>
                     ))}
                     <option value="Other">Other</option>
                 </select>
@@ -154,7 +155,7 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
 
                 <div className='ingredientsList'>
                     {ingredientsList.map((item, index) => (
-                        <div className='ingredientItem'>    
+                        <div key={index} className='ingredientItem'>    
                             <p>{item.quantity} {item.unit} of {item.ingredient} 
                                 <button className="removeButton" onClick={() => removeIngredient(index)}>Remove</button>
                             </p>
@@ -163,7 +164,7 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
                 </div>
 
 
-                </p>
+                </div>
             );
 }
  

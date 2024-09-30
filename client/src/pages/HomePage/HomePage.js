@@ -8,7 +8,6 @@ const Home = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch recipes when the component mounts
     const fetchRecipes = async () => {
       try {
         const response = await axiosInstance.get('/recipes');

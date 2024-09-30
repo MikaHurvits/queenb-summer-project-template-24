@@ -4,7 +4,6 @@ import styles from './FilterBar.module.css';
 
 
 
-const FilterBar = () => {
     return (
         <span className={styles.filterBar}>
         </span>

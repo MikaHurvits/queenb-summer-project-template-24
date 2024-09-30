@@ -3,8 +3,6 @@ const Ingredient = require('../models/IngredientModel');
 
 // Get all recipes by certain ingredient
 const getRecepiesByIngredients = async (req, res) => {
-  //todo - check what happens in "all" category!!
-
   try {
     const { ingredients, category } = req.query;  
     // Filter only by category - No ingredients were provided
@@ -13,9 +11,9 @@ const getRecepiesByIngredients = async (req, res) => {
       const filteredRecipes = recipes.filter(recipe => recipe.categories.includes(category));
       return res.status(200).json({ recipes: filteredRecipes });
     }
-    //Ingredients are provided
-    const ingredientsList = ingredients.split(','); 
-  
+
+    // Filter by provided ingredients
+    const ingredientsList = ingredients.split(',');
     const foundIngredients = await Ingredient.find({ ingredient: { $in: ingredientsList } }).populate('recipes');
 
     if (foundIngredients.length === 0) {
@@ -30,7 +28,6 @@ const getRecepiesByIngredients = async (req, res) => {
 
     recipeIds = [...new Set(recipeIds)];
 
-    // Find the recipes that match the ingredient IDs and contain all the specified ingredients
     const filteredRecipes = await Recipe.find({
       _id: { $in: recipeIds },
       'ingredients.ingredient': { $all: ingredientsList } 
@@ -47,7 +44,6 @@ const getRecepiesByIngredients = async (req, res) => {
 
     return res.status(200).json({ recipes: finalRecipes });
   } catch (err) {
-    console.error('Error fetching recipes:', err);
     return res.status(500).json({ message: 'Server error' });
   }
 };
@@ -55,4 +51,3 @@ const getRecepiesByIngredients = async (req, res) => {
 module.exports = {
   getRecepiesByIngredients
 };
-

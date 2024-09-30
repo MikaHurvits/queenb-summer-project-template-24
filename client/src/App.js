@@ -7,9 +7,7 @@ import FilterBar from './components/common/FilterBar/FilterBar';
 
 
 
-function App() {
   return (
-    <BrowserRouter>
       <div className={styles.app}>
         <header className={styles.appHeader}>
           {/* <img src="/project-logo.png" alt="Logo" className={styles.appLogo} /> */}
@@ -24,11 +22,9 @@ function App() {
         <div className={styles.searchAndFilter}>
           <AppNav />
           <span>
-            <input placeholder='Search Recipe'></input>
-          </span>
-        </div>
-        
-        
+          <input placeholder="Search Recipe" />
+        </span>
+      </div>
 
         <main className={styles.main}>
           <div className={styles.layoutContainer}>
@@ -48,7 +44,6 @@ function App() {
         </main>
 
       </div>
-    </BrowserRouter>
   );
 }
 

@@ -31,7 +31,7 @@ function App() {
                 <Link to="/" className={styles.appLink}>Home</Link>
                 <button className={styles.addButton}>Add Recipe</button>
                 <Link to="/saved" className={styles.appLink}>Saved🤍</Link>
-                <button onClick={handleLogout} className={styles.appLink}>Logout</button>
+                <button onClick={handleLogout} className={styles.logoutButton}>Logout</button>
               </>
             ) : (
               <>

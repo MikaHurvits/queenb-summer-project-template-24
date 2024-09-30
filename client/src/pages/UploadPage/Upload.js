@@ -2,7 +2,9 @@ import './Upload.css';
 import React, { useState } from 'react';
 import CategorySelection from '../../components/categorySelection/categorySelection';
 
-import IngredientsBox from '../../components/ingredientsBox/ingredientsBox';
+
+import IngredientsBox from '../../components/IngredientsBox/IngredientsBox';
+
 
 
 const Upload = () => {
@@ -11,12 +13,6 @@ const Upload = () => {
     const [selectedCategory, setCategory] = useState('');
     const [totalTime, setTotalTime] = useState('');
 
-    // const [selectedIngredient, setSelectedIngredient] = useState('');
-    // const [customIngredient, setCustomIngredient] = useState('');
-    // const [selectedQuantity, setSelectedQuantity] = useState('');
-    // const [selectedUnit, setSelectedUnit] = useState('');
-    // const [customUnit, setCustomUnit] = useState('');
-
     const [ingredientsList, setIngredientsList] = useState([]);
 
     const [instructions, setInstructions] = useState('');
@@ -24,6 +20,8 @@ const Upload = () => {
     const [image, setImage] = useState(null);
 
     const [error, setError] = useState('');
+
+    const [successMessage, setSuccessMessage] = useState('');
 
 // temporary
 const imageUrl = '';
@@ -38,133 +36,106 @@ const createdBy = 'Mika check';
         setImage(e.target.files[0]);
     };
 
-
-    // const predefinedIngredients = ['Flour', 'Sugar', 'Butter', 'Eggs'];
-    // const unitsList = ['grams', 'cups', 'tablespoons', 'teaspoons'];
-
-
-    // const handleIngredientChange = async (event) => {
-    //     const value = event.target.value;
-    //     setSelectedIngredient(value);
-    //     if (value !== 'Other') {
-    //         setCustomIngredient('');
-    //     }
-    // };
-
-    // const handleCustomIngredientChange = async (event) => {
-    //     setCustomIngredient(event.target.value);
-    // };
-
-    // const handleQuantityChange = async (event) => {
-    //     const value = event.target.value;
-    //     if (value < 0) {
-    //         setError('Quantity cannot be negative');
-    //     } else if (value === '') {
-    //         setError('Quantity is required');
-    //     } else {
-    //         setError('');
-    //     }
-    //     setSelectedQuantity(value);
-    // };
-
-
-    // const handleUnitChange = async (event) => {
-    //     const value = event.target.value;
-    //     setSelectedUnit(value);
-    //     if (value !== 'Other') {
-    //         setCustomUnit('');
-    //     }
-    // };
-
-    // const handleCustomUnitChange = async (event) => {
-    //     setCustomUnit(event.target.value);
-    // };
-
-
-    // const addIngredient = async () => {
-    //     if (!selectedIngredient && !customIngredient) {
-    //         setError('Ingredient is required');
-    //         return;
-    //     }
-    //     if (!selectedQuantity) {
-    //         setError('Quantity is required');
-    //         return;
-    //     }
-    //     if (!selectedUnit && !customUnit) {
-    //         setError('Unit is required');
-    //         return;
-    //     }
-
-    //     const ingredient = selectedIngredient === 'Other' ? customIngredient : selectedIngredient;
-    //     const unit = selectedUnit === 'Other' ? customUnit : selectedUnit;
-    //     const newIngredient = { ingredient, quantity: selectedQuantity, unit};
-    //     setIngredientsList([...ingredientsList, newIngredient]);
-
-    //     // Reset fields
-    //     setSelectedIngredient('');
-    //     setCustomIngredient('');
-    //     setSelectedQuantity('');
-    //     setSelectedUnit('');
-    //     setCustomUnit('');
-    //     setError('');
-
-    // };
-
-
-    // const removeIngredient = (index) => {
-    //     const newList = ingredientsList.filter((_, i) => i !== index);
-    //     setIngredientsList(newList);
-    // };
-
-
-    //edit this function
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const recipe = 
+        setError(''); 
+        setSuccessMessage(''); 
+    
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('category', selectedCategory);
+        formData.append('totalTime', totalTime);
+        formData.append('ingredientsList', JSON.stringify(ingredientsList)); // Convert to JSON string
+        formData.append('instructions', instructions);
+        formData.append('image', image); // Use the file object directly
         
-        {title, selectedCategory, imageUrl, ingredientsList, totalTime, instructions, createdBy}
-
-       
-        // const form = e.target;
-        // const formData = new FormData(form);
-
-        const response = await fetch('/api/upload', {
-            method: 'POST',
-            body: JSON.stringify(recipe),
-            headers:{
-                'Content-Type': 'application/json'
+        console.log(formData);
+        
+        try {
+            const response = await fetch('/api/upload', {
+                method: 'POST',
+                body: formData, // Send FormData directly
+            });
+    
+            const json = await response.json();
+            if (response.ok) {
+                setSuccessMessage('Upload successful!');
+                // Clear form fields
+                setCategory('');
+                setTitle('');
+                setTotalTime('');
+                setIngredientsList([]);
+                setInstructions('');
+                setImage(null); // Reset image state
+            } else {
+                console.error('Upload failed');
+                setError(json.error || 'Upload failed');
             }
-        })
-        const json = await response.json()
-        
-        if (!response.ok){
-            setError(json.error)
+        } catch (error) {
+            console.error('Error uploading data:', error);
+            setError(error.message || 'Error uploading data');
         }
-        if (response.ok){
-            setCategory('')
-            setTitle('')
-            setTotalTime('')
-            // setSelectedIngredient('')
-            // setCustomIngredient('')
-            // setSelectedQuantity('')
-            // setSelectedUnit('')
-            // setCustomUnit('')
-            setIngredientsList([])
-            setInstructions('')
+    };
+    
+    // Change the button type to submit
+    //<button type="submit">Submit form</button>
 
-            setError(null)
-            console.log('new recipe added', json)
-        } 
+   
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     setError(''); 
+    //     setSuccessMessage(''); 
 
+    // {**/
+    //     const formData = {
+    //         title,
+    //         category: selectedCategory,
+    //         totalTime,
+    //         ingredientsList,
+    //         instructions,
+    //         imageUrl: image,
+    //     };
 
+    //     const recipe = {
+    //         title,
+    //         category: selectedCategory,
+    //         totalTime,
+    //         ingredientsList,
+    //         instructions,
+    //         imageUrl: image,
+    //     };
+    // */}
 
+    //     try {
+    //         const response = await fetch('/api/upload', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(recipe),
+    //         });
+    //         const json = await response.json();
+    //         if (response.ok) {
+    //             setSuccessMessage('Upload successful!');
+    //             // Clear form fields
+    //             setCategory('');
+    //             setTitle('');
+    //             setTotalTime('');
+    //             setIngredientsList([]);
+    //             setInstructions('');
+    //             setImage('');
+    //         } else {
+    //             console.error('Upload failed');
+    //             setError(json.error || 'Upload failed');
 
-        // const formJason = Object.fromEntries(formData.entries());
-        // console.log(formJason);
-        // console.log([...formData.entries()]);
-        
-    }
+    //     };
+    // }
+    //     catch (error) {
+    //         console.log('mika')
+    //         console.error('Error uploading data:', error);
+    //         setError(error.message || 'Error uploading data');
+    //     }
+    // };
 
 
 
@@ -205,7 +176,7 @@ const createdBy = 'Mika check';
                 </div>
 
 
-                <IngredientsBox
+                <IngredientsBox 
                 ingredientsList={ingredientsList}
                 setIngredientsList={setIngredientsList}
                 error={error}
@@ -214,121 +185,39 @@ const createdBy = 'Mika check';
 
 
 
-
-
-
-                {/* <p className='ingredientsContainer'>
-
-                
-                <label>Ingredients List: </label>
-                <div className='choiceContainer'> 
-                <select placeholder="Ingredient " label="Ingredient" value={selectedIngredient} onChange={handleIngredientChange} className='selectBox'>
-                    <option style={{color: 'red'}} value="" disabled> Select Ingredient </option>
-                    {predefinedIngredients.map((ingredient) => (
-                        <option value={ingredient}> {ingredient} </option>
-                    ))}
-                    <option value="Other">Other</option>
-                </select>
-                {selectedIngredient === 'Other' && (
-                    <input
-                        className='selectBox'
-                        type="text"
-                        placeholder="Enter Ingredient"
-                        value={customIngredient}
-                        onChange={handleCustomIngredientChange}
+                <div className='instructionsBoxContainer'>
+                    <label>Instructions: </label>
+                    <textarea 
+                        className='instructionsBox'
+                        name="Instructions"
+                        rows="7" // Adjust the number of rows as needed
+                        onChange={(e) => setInstructions(e.target.value)}
+                        value={instructions}
                     />
-                )}
-                
-                <input
-                    className='smallTextBox'
-                    type="number"
-                    label="Quantity"
-                    placeholder="Quantity"
-                    value={selectedQuantity}
-                    onChange={handleQuantityChange}
-                />
- 
-                
-                <select value={selectedUnit} onChange={handleUnitChange} className='selectBox'>
-                    <option value="" disabled> Select Unit</option>
-                    {unitsList.map((unit) => (
-                        <option value={unit}>{unit}</option>
-                    ))}
-                    <option value="Other">Other</option>
-                </select>
-                {selectedUnit === "Other" && (
-                    <input
-                        type="text"
-                        placeholder="Enter Unit"
-                        value={customUnit}
-                        onChange={handleCustomUnitChange}
-                    />
-                )}
-
-                <button onClick={addIngredient}>Add Ingredient</button>
-                {error && <p>{error}</p>}
-
-                
-                </div>
-                
-                <div className='ingredientsList'>
-                    {ingredientsList.map((item, index) => (
-                        <div className='ingredientItem'>    
-                            <p>{item.quantity} {item.unit} of {item.ingredient} 
-                                <button className="removeButton" onClick={() => removeIngredient(index)}>Remove</button>
-                            </p>
-                        </div>
-                    ))}
-                </div>
-                </p>
- */}
-
-
-
-
-
-
-                <div className='instructionsBox'>
-                <label>Instructions: </label>
-                <input 
-                className='textInput'
-                type="text"
-                name = "Instructios"
-                onChange = {(e) => setInstructions(e.target.value)}
-                value = {instructions}
-                />
                 </div>
 
 
 
                 <div>
-                <label>Upload Image: </label>
+                <label>Image URL: </label>
                 <input 
-                    type="file"
-                    accept="image/*" // Restrict to image files only
-                    onChange={handleImageChange}
+                    type="text"
+                    name="imageUrl"
+                    placeholder="Enter image URL"
+                    onChange={(e) => setImage(e.target.value)}
+                    value={image}
                 />
-                </div>
-
-
-
-
+            </div>
 
                 <hr />
-                <button type="reset">Reset form</button>
-                <button type="submit">Submit form</button>
+            <button type="reset">Reset form</button>
+            <button type="submit">Submit form</button>
+            {/* <button type="button" onClick={handleSubmit}>Submit form</button> */}
                     {error && <div className='error'>{error}</div>}
+                    {successMessage && <div className='success'>{successMessage}</div>}
             </form>
         </div>
     );
-
-
-
-
-
-
-
-
-}
+};
  
 export default Upload;

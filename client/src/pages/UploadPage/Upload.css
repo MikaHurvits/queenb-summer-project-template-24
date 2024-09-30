@@ -70,6 +70,26 @@ fieldset {
 }
 
 
+.instructionsBox{
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height as needed */
+    padding: 10px; /* Padding inside the textarea */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    font-size: 16px; /* Font size */
+    font-family: Arial, sans-serif; /* Font family */
+    color: #333; /* Text color */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    resize: vertical; /* Allow vertical resizing */
+    margin-bottom: 15px; /* Space below the textarea */
+}
+
+.instructionsBox:focus{
+    border-color: #66afe9; /* Border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* Add a shadow on focus */
+}
 
 
 

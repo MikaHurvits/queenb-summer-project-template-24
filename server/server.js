@@ -2,12 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const multer = require('multer');
 const RecipeManager = require('./databaseManager/recipeManager');
 
 const recipesRoutes = require('./routes/recipes')
 const recipesFilterRoutes = require('./routes/recipesFilterRoute')
 const userRoutes = require('./routes/user');
-const uploadRoute = require('./routes.upload');
+const UploadRoutes = require('./routes/Upload');  // Use forward slash for the correct path
+
 
 
 dotenv.config();
@@ -37,7 +39,7 @@ app.use('/api/recipes', recipesRoutes)
 app.use('/api/user', userRoutes)
 // app.use('/api/filter', recipesFilterRoutes) //todo - check what to keep
 app.use('/api/filter',recipesFilterRoutes);
-app.use('/api/upload', uploadRoute);
+app.use('/api/upload', UploadRoutes);
 
 
 

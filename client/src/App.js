@@ -30,6 +30,7 @@ function App() {
             {user ? (
               <>
                 <Link to="/" className={styles.appLink}>Home</Link>
+                <Link to="/upload" className={styles.addButton}>Upload</Link> 
                 <button className={styles.addButton}>Add Recipe</button>
                 <Link to="/saved" className={styles.appLink}>Saved🤍</Link>
                 <button onClick={handleLogout} className={styles.appLink}>Logout</button>

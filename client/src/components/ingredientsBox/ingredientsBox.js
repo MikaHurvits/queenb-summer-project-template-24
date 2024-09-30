@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 
-const IgredientsBox  = ({ingredientsList, setIngredientsList, error, setError}) => {
+const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError}) => {
 
     const predefinedIngredients = ['Flour', 'Sugar', 'Butter', 'Eggs'];
     const unitsList = ['grams', 'cups', 'tablespoons', 'teaspoons'];
@@ -70,6 +70,7 @@ const IgredientsBox  = ({ingredientsList, setIngredientsList, error, setError}) 
         const ingredient = selectedIngredient === 'Other' ? customIngredient : selectedIngredient;
         const unit = selectedUnit === 'Other' ? customUnit : selectedUnit;
         const newIngredient = { ingredient, quantity: selectedQuantity, unit};
+        
         setIngredientsList([...ingredientsList, newIngredient]);
 
         // Reset fields
@@ -150,8 +151,20 @@ const IgredientsBox  = ({ingredientsList, setIngredientsList, error, setError}) 
 
                 {/* </div> */}
                 </div>
+
+                <div className='ingredientsList'>
+                    {ingredientsList.map((item, index) => (
+                        <div className='ingredientItem'>    
+                            <p>{item.quantity} {item.unit} of {item.ingredient} 
+                                <button className="removeButton" onClick={() => removeIngredient(index)}>Remove</button>
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+
                 </p>
             );
 }
  
-export default IgredientsBox;
+export default IngredientsBox;

@@ -21,6 +21,7 @@ app.use(express.json())
 app.use(cors({
   origin: process.env.CLIENT_URL
 }));
+
 // app.use(bodyParser.json());
 
 app.use((req, res, next) => {
@@ -33,8 +34,8 @@ app.use((req, res, next) => {
 //app.use('/api/searchBar', nonMandatoryAuth, searchBarRoutes)
 app.use('/api/searchBar', searchBarRoutes)
 app.use('/api/recipes', recipesRoutes)
+app.use('/api/filter', recipesFilterRoutes) 
 app.use('/api/user', userRoutes)
-// app.use('/api/filter', recipesFilterRoutes) //todo - check what to keep
 
 app.use('/api/filter',recipesFilterRoutes);
 
@@ -52,3 +53,4 @@ mongoose.connect(process.env.MONGO_URI)
   }).catch((err) => {
     console.log(err)
   });
+  

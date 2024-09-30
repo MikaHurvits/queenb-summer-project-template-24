@@ -1,21 +1,20 @@
 const Recipe = require('../models/RecipeModel');
 const Ingredient = require('../models/IngredientModel');
 
-// Get all recipes by certain ingredient
+// Get recipes filtered by both ingredients and category
 const getRecepiesByIngredients = async (req, res) => {
-  //todo - check what happens in "all" category!!
-
   try {
-    const { ingredients, category } = req.query;  
-    // Filter only by category - No ingredients were provided
-    if (!ingredients) { 
+    const { ingredients, category } = req.query;
+
+    // No ingredients provided, filter by category only
+    if (!ingredients) {
       const recipes = await Recipe.find();
-      const filteredRecipes = recipes.filter(recipe => recipe.categories.includes(category));
+      const filteredRecipes = category === 'all' ? recipes : recipes.filter(recipe => recipe.categories.includes(category));
       return res.status(200).json({ recipes: filteredRecipes });
     }
-    //Ingredients are provided
-    const ingredientsList = ingredients.split(','); 
-  
+
+    // Filter by provided ingredients
+    const ingredientsList = ingredients.split(',');
     const foundIngredients = await Ingredient.find({ ingredient: { $in: ingredientsList } }).populate('recipes');
 
     if (foundIngredients.length === 0) {
@@ -30,24 +29,19 @@ const getRecepiesByIngredients = async (req, res) => {
 
     recipeIds = [...new Set(recipeIds)];
 
-    // Find the recipes that match the ingredient IDs and contain all the specified ingredients
     const filteredRecipes = await Recipe.find({
       _id: { $in: recipeIds },
-      'ingredients.ingredient': { $all: ingredientsList } 
+      'ingredients.ingredient': { $all: ingredientsList }
     });
 
     if (filteredRecipes.length === 0) {
       return res.status(404).json({ message: 'No recipes found with all specified ingredients' });
     }
 
-    let finalRecipes = filteredRecipes;
-    if (category) {
-      finalRecipes = filteredRecipes.filter(recipe => recipe.categories.includes(category)); 
-    }
+    let finalRecipes = category === 'all' ? filteredRecipes : filteredRecipes.filter(recipe => recipe.categories.includes(category));
 
     return res.status(200).json({ recipes: finalRecipes });
   } catch (err) {
-    console.error('Error fetching recipes:', err);
     return res.status(500).json({ message: 'Server error' });
   }
 };
@@ -55,4 +49,3 @@ const getRecepiesByIngredients = async (req, res) => {
 module.exports = {
   getRecepiesByIngredients
 };
-

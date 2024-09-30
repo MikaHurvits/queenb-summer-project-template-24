@@ -55,13 +55,29 @@
 
 .main {
   display: flex;
-  flex-direction: row;
   background-color: #FFFFFF;
   min-height: 100vh;
 }
 
+
+
+.layoutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  flex: 1;
+}
+
+.contentContainer {
+  width: 90%; /* Adjust the width of the content to take more space */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
 .footer {
-  background-color: #4e1001;
+  background-color: #4e1001; /* Purple color */
   color: white;
   position: fixed;
   width: 100%;
@@ -74,3 +90,4 @@
 input {
   width: 250px;
 }
+

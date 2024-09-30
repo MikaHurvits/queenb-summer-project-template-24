@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
   firstName: {
-      type: String,
-      required: true,
-      trim: true
+    type: String,
+    required: true,
+    trim: true
   },
   lastName: {
-      type: String,
-      required: true,
-      trim: true
+    type: String,
+    required: true,
+    trim: true
   },
   username: {
     type: String,
@@ -29,7 +29,6 @@ const userSchema = new mongoose.Schema({
     required: true,
     validate: {
       validator: function(password) {
-        // Password must be at least 6 characters long, contain at least one lowercase letter, and no spaces
         const passwordRegex = /^(?=.*[a-z])[^\s]{6,}$/;
         return passwordRegex.test(password);
       },

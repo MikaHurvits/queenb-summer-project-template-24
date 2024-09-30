@@ -21,7 +21,7 @@ const AppNav = () => {
                     All
                 </Link>
                 {categories.map((category) => (
-                    <Link key={category.id} to={category.id} className={`${styles.appLink} ${location.pathname === `/${category.id}` ? styles.active : ''}`}>
+                    <Link key={category.id} to={`recipes/category/${category.name.split(' ').join('')}`} className={`${styles.appLink} ${location.pathname === `/${category.id}` ? styles.active : ''}`}>
                         {category.name}
                     </Link>
                 ))}

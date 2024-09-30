@@ -1,0 +1,62 @@
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px); /* Adjust for header and footer */
+    padding: 20px;
+}
+
+.authForm {
+    background-color: white;
+    padding: 60px; /* Further increased padding for a larger form */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Increased width for a bigger form */
+    text-align: left;
+    margin: auto; /* Center horizontally */
+}
+
+.authForm h3 {
+    text-align: center;
+    color: #eb513d;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em; /* Increased font size */
+}
+
+.authForm label {
+    display: block;
+    margin-bottom: 10px; /* Increased margin for more space between labels */
+    font-size: 16px; /* Increased label font size */
+}
+
+.authForm input {
+    width: 100%;
+    padding: 15px; /* Increased padding inside the inputs */
+    margin-bottom: 20px; /* Increased margin for more spacing between inputs */
+    border-radius: 6px; /* Increased border-radius for more rounded look */
+    border: 1px solid #ddd;
+    font-size: 16px; /* Increased font size inside inputs */
+}
+
+.authForm button {
+    width: 100%; /* Ensure button width matches input fields */
+    padding: 15px; /* Increased button padding */
+    background-color: #eb513d;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Increased border-radius for more rounded buttons */
+    cursor: pointer;
+    font-size: 18px; /* Increased button font size */
+    margin-top: 20px; /* Add margin at the top for spacing */
+}
+
+.authForm button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.authForm .error {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px; /* Increased error message font size */
+}

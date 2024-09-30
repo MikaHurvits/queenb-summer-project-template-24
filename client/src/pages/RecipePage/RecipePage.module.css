@@ -1,0 +1,62 @@
+  .RecipePage {
+    margin-left: 205px; /* Increased left margin to accommodate filter bar width plus its margin */
+    max-width: calc(100% - 205px); /* Adjusting max-width to prevent overflow */
+    margin-top: 40px;
+    margin-right: 40px;
+    padding-left: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: left;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .headerContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .headerContainer h1 {
+    color: #e55340;
+    font-family: 'EB Garamond';
+    font-size: 3.5em;
+  }
+  
+  .headerContainer img {
+    height: 150px;
+    width: 150px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-self: center;
+    border-radius: 8px;
+  }
+  
+  .ingredients, .instructions {
+    margin-top: 20px;
+  }
+  
+  .ingredients ul, .instructions ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ingredients li, .instructions li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    text-indent: -15px;
+  }
+  
+  .ingredients li::before, li::before {
+    content: "• ";
+    color: #e55340; /* Matching the theme color */
+    font-size: larger;
+    padding-right: 5px;
+  }
+  
+  .instructions {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }

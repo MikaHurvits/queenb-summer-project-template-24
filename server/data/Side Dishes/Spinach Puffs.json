@@ -1,0 +1,35 @@
+{
+    "title": "Spinach Puffs",
+    "categories": ["Side Dishes"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSFcg4rPTxoeLIS5G3n-HccqMhmOef_TdB9w&s",
+    "ingredients": [
+      {
+        "ingredient": "Frozen spinach",
+        "quantity": "1 cup, thawed and drained"
+      },
+      {
+        "ingredient": "Feta cheese",
+        "quantity": "1/2 cup, crumbled"
+      },
+      {
+        "ingredient": "Puff pastry",
+        "quantity": "1 sheet, thawed"
+      },
+      {
+        "ingredient": "Egg",
+        "quantity": "1, beaten"
+      },
+      {
+        "ingredient": "Salt and pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Preheat oven to 400°F (200°C).",
+      "Mix spinach, feta, salt, and pepper in a bowl.",
+      "Cut puff pastry into squares, fill with mixture, and fold over.",
+      "Brush with beaten egg and bake for 15-20 minutes until golden."
+    ],
+    "createdBy": null
+}

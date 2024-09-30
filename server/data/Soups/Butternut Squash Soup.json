@@ -1,0 +1,65 @@
+{
+    "title": "Butternut Squash Soup",
+    "categories": ["Soups"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfMY1QWYDhIqIBNCPLuwcg1jWFW35aeuMwhQ&s",
+    "ingredients": [
+        {
+        "ingredient": "Butternut squash",
+        "quantity": "1 medium, peeled, seeded, and cubed"
+        },
+        {
+        "ingredient": "Carrots",
+        "quantity": "2, sliced"
+        },
+        {
+        "ingredient": "Onion",
+        "quantity": "1 medium, chopped"
+        },
+        {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+        },
+        {
+        "ingredient": "Vegetable broth",
+        "quantity": "1 liter"
+        },
+        {
+        "ingredient": "Coconut milk",
+        "quantity": "200ml"
+        },
+        {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+        },
+        {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+        },
+        {
+        "ingredient": "Black pepper",
+        "quantity": "to taste"
+        },
+        {
+        "ingredient": "Cinnamon",
+        "quantity": "1/4 teaspoon"
+        },
+        {
+        "ingredient": "Nutmeg",
+        "quantity": "1/4 teaspoon"
+        }
+    ],
+    "totalTime": 40,
+    "instructions": [
+        "Heat olive oil in a large pot over medium heat.",
+        "Add onions and garlic, sauté until softened, about 5 minutes.",
+        "Add butternut squash and carrots, and cook for another 5 minutes.",
+        "Pour in the vegetable broth and bring to a boil.",
+        "Reduce heat and simmer for 20 minutes, until vegetables are tender.",
+        "Use an immersion blender to puree the soup until smooth.",
+        "Stir in coconut milk, cinnamon, and nutmeg.",
+        "Season with salt and black pepper to taste.",
+        "Serve hot."
+    ],
+    "createdBy": null
+}
+  

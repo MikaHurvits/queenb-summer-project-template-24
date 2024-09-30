@@ -1,0 +1,67 @@
+{
+    "title": "French Onion Soup",
+    "categories": ["Soups"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi3tJeAjlJGtCi_WiD6GXrlhRmBVIXn6uDoQ&s",
+    "ingredients": [
+      {
+        "ingredient": "Onions",
+        "quantity": "5 large, thinly sliced"
+      },
+      {
+        "ingredient": "Beef broth",
+        "quantity": "1.5 liters"
+      },
+      {
+        "ingredient": "Butter",
+        "quantity": "3 tablespoons"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "1 tablespoon"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+      },
+      {
+        "ingredient": "Thyme",
+        "quantity": "1 teaspoon, dried"
+      },
+      {
+        "ingredient": "Bay leaves",
+        "quantity": "2"
+      },
+      {
+        "ingredient": "Dry white wine",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Baguette slices",
+        "quantity": "as needed, toasted"
+      },
+      {
+        "ingredient": "Gruyère cheese",
+        "quantity": "200g, grated"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      },
+      {
+        "ingredient": "Black pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 60,
+    "instructions": [
+      "Heat butter and olive oil in a large pot over medium heat.",
+      "Add sliced onions and cook, stirring often, until caramelized, about 25-30 minutes.",
+      "Add garlic, thyme, and bay leaves, and cook for another minute.",
+      "Pour in the white wine, scraping the bottom of the pot, and let it reduce by half.",
+      "Add beef broth, bring to a boil, then reduce heat and simmer for 20 minutes.",
+      "Remove bay leaves and season with salt and pepper.",
+      "Ladle the soup into bowls, top with toasted baguette slices, and sprinkle with Gruyère cheese.",
+      "Broil until the cheese is melted and bubbly, then serve hot."
+    ],
+    "createdBy": null
+}  

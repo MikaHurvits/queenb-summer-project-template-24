@@ -1,10 +1,10 @@
 {
     "Items": [
-        "Appetizer", 
-        "Dessert",
-        "Main Course",
-        "Salad",
-        "Side Dish",
-        "Soup"
+        "Appetizers", 
+        "Desserts",
+        "Main Courses",
+        "Salads",
+        "Side Dishes",
+        "Soups"
     ]
 }

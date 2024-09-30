@@ -1,0 +1,41 @@
+{
+    "title": "Bruschetta",
+    "categories": ["Appetizers"],
+    "imageUrl": "https://emilybites.com/wp-content/uploads/2023/11/Tomato-and-Goat-Cheese-Bruschetta-5b.jpg",
+    "ingredients": [
+      {
+        "ingredient": "Baguette",
+        "quantity": "1, sliced"
+      },
+      {
+        "ingredient": "Tomatoes",
+        "quantity": "2 cups, diced"
+      },
+      {
+        "ingredient": "Fresh basil",
+        "quantity": "1/4 cup, chopped"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Balsamic vinegar",
+        "quantity": "1 tablespoon"
+      }
+    ],
+    "totalTime": 15,
+    "instructions": [
+      "Preheat oven to 400°F (200°C).",
+      "Arrange baguette slices on a baking sheet and toast in the oven for 5-7 minutes.",
+      "In a bowl, combine tomatoes, basil, garlic, olive oil, and balsamic vinegar.",
+      "Top toasted baguette slices with the tomato mixture.",
+      "Serve immediately."
+    ],
+    "createdBy": null
+}
+  

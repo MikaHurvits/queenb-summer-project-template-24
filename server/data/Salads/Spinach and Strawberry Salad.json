@@ -1,0 +1,35 @@
+{
+    "title": "Spinach and Strawberry Salad",
+    "categories": ["Salads"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThOHCZIsqSZT6Sjyd1hrNKPBnczljY_zi7qA&s",
+    "ingredients": [
+      {
+        "ingredient": "Fresh spinach",
+        "quantity": "4 cups"
+      },
+      {
+        "ingredient": "Strawberries",
+        "quantity": "1 cup, sliced"
+      },
+      {
+        "ingredient": "Almonds",
+        "quantity": "1/4 cup, sliced"
+      },
+      {
+        "ingredient": "Feta cheese",
+        "quantity": "1/4 cup, crumbled"
+      },
+      {
+        "ingredient": "Balsamic vinaigrette",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "totalTime": 10,
+    "instructions": [
+      "In a large bowl, combine spinach, strawberries, almonds, and feta cheese.",
+      "Drizzle with balsamic vinaigrette and toss gently.",
+      "Serve immediately."
+    ],
+    "createdBy": null
+}
+  

@@ -1,0 +1,52 @@
+{
+    "title": "Mediterranean Chickpea Salad",
+    "categories": ["Salads"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ljR9q_n50eFQDYjFSEfQoJ8eGdWCsAI5Fg&s",
+    "ingredients": [
+      {
+        "ingredient": "Chickpeas",
+        "quantity": "1 can, drained and rinsed"
+      },
+      {
+        "ingredient": "Cucumber",
+        "quantity": "1, diced"
+      },
+      {
+        "ingredient": "Tomatoes",
+        "quantity": "1 cup, diced"
+      },
+      {
+        "ingredient": "Red onion",
+        "quantity": "1/4 cup, finely chopped"
+      },
+      {
+        "ingredient": "Kalamata olives",
+        "quantity": "1/4 cup, sliced"
+      },
+      {
+        "ingredient": "Feta cheese",
+        "quantity": "1/4 cup, crumbled"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Red wine vinegar",
+        "quantity": "1 tablespoon"
+      },
+      {
+        "ingredient": "Oregano",
+        "quantity": "1/2 teaspoon"
+      }
+    ],
+    "totalTime": 15,
+    "instructions": [
+      "In a large bowl, combine chickpeas, cucumber, tomatoes, red onion, olives, and feta cheese.",
+      "In a small bowl, whisk together olive oil, red wine vinegar, and oregano.",
+      "Pour dressing over salad and toss gently.",
+      "Serve immediately or chilled."
+    ],
+    "createdBy": null
+}
+  

@@ -1,0 +1,34 @@
+{
+    "title": "Cheese and Charcuterie Board",
+    "categories": ["Appetizers"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJzGTVcaP7mnm2nPc-M-tcNfZ3cSrxlyICVQ&s",
+    "ingredients": [
+      {
+        "ingredient": "Assorted cheeses",
+        "quantity": "8 oz each (e.g., cheddar, brie, gouda)"
+      },
+      {
+        "ingredient": "Assorted cured meats",
+        "quantity": "8 oz (e.g., salami, prosciutto)"
+      },
+      {
+        "ingredient": "Crackers",
+        "quantity": "1 box"
+      },
+      {
+        "ingredient": "Fresh fruit",
+        "quantity": "1 cup (e.g., grapes, apple slices)"
+      },
+      {
+        "ingredient": "Nuts",
+        "quantity": "1/2 cup (e.g., almonds, walnuts)"
+      }
+    ],
+    "totalTime": 10,
+    "instructions": [
+      "Arrange cheeses, cured meats, crackers, fruit, and nuts on a large board or platter.",
+      "Serve with a selection of dips and spreads if desired."
+    ],
+    "createdBy": null
+}
+  

@@ -1,0 +1,35 @@
+{
+    "title": "Parmesan Zucchini Fritters",
+    "categories": ["Side Dishes"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFp1OYRb09Y_s4lEilg7f_myRKSHRkKY1SzA&s",
+    "ingredients": [
+      {
+        "ingredient": "Zucchini",
+        "quantity": "2 medium, grated"
+      },
+      {
+        "ingredient": "Parmesan cheese",
+        "quantity": "1/2 cup, grated"
+      },
+      {
+        "ingredient": "Egg",
+        "quantity": "1, beaten"
+      },
+      {
+        "ingredient": "Flour",
+        "quantity": "1/4 cup"
+      },
+      {
+        "ingredient": "Salt and pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 25,
+    "instructions": [
+      "In a bowl, combine grated zucchini, Parmesan, egg, flour, salt, and pepper.",
+      "Heat oil in a skillet over medium heat.",
+      "Drop spoonfuls of the mixture into the skillet and flatten slightly.",
+      "Cook for 3-4 minutes on each side until golden brown."
+    ],
+    "createdBy": null
+}

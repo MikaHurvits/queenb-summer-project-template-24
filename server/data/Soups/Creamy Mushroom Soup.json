@@ -1,0 +1,55 @@
+{
+    "title": "Creamy Mushroom Soup",
+    "categories": ["Soups"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1YWsbnY_GkFAPVhW0r89_HWYmnl-TGfDEnA&s",
+    "ingredients": [
+      {
+        "ingredient": "Mushrooms",
+        "quantity": "500g, sliced"
+      },
+      {
+        "ingredient": "Onion",
+        "quantity": "1 medium, chopped"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+      },
+      {
+        "ingredient": "Vegetable broth",
+        "quantity": "600ml"
+      },
+      {
+        "ingredient": "Heavy cream",
+        "quantity": "200ml"
+      },
+      {
+        "ingredient": "Butter",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      },
+      {
+        "ingredient": "Black pepper",
+        "quantity": "to taste"
+      },
+      {
+        "ingredient": "Fresh parsley",
+        "quantity": "for garnish"
+      }
+    ],
+    "totalTime": 35,
+    "instructions": [
+      "Melt butter in a large pot over medium heat.",
+      "Add onions and garlic, sauté until softened, about 5 minutes.",
+      "Add sliced mushrooms and cook until they release their moisture and start to brown.",
+      "Pour in the vegetable broth and bring to a boil.",
+      "Reduce heat and simmer for 15 minutes.",
+      "Use an immersion blender to puree the soup until smooth.",
+      "Stir in the heavy cream and season with salt and pepper.",
+      "Serve hot, garnished with fresh parsley."
+    ],
+    "createdBy": null
+}

@@ -1,0 +1,40 @@
+{
+    "title": "Asian Sesame Salad",
+    "categories": ["Salads"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJ5I1ayZ_Ot7-jAcDWmDeQ0pIYoRq794ugA&s",
+    "ingredients": [
+      {
+        "ingredient": "Mixed greens",
+        "quantity": "4 cups"
+      },
+      {
+        "ingredient": "Shredded carrots",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Red bell pepper",
+        "quantity": "1, thinly sliced"
+      },
+      {
+        "ingredient": "Cucumber",
+        "quantity": "1, thinly sliced"
+      },
+      {
+        "ingredient": "Sesame seeds",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Sesame dressing",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "totalTime": 15,
+    "instructions": [
+      "Combine mixed greens, shredded carrots, red bell pepper, and cucumber in a bowl.",
+      "Drizzle with sesame dressing and toss gently.",
+      "Sprinkle with sesame seeds before serving.",
+      "Serve immediately."
+    ],
+    "createdBy": null
+}
+  

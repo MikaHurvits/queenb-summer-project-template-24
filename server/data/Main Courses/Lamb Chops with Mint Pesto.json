@@ -1,0 +1,39 @@
+{
+    "title": "Lamb Chops with Mint Pesto",
+    "categories": ["Main Courses"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnuXCh4WAnERw6BMu2pOaNgeWQcoGy2ttXqQ&s",
+    "ingredients": [
+      {
+        "ingredient": "Lamb chops",
+        "quantity": "8"
+      },
+      {
+        "ingredient": "Fresh mint",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "1/2 cup"
+      },
+      {
+        "ingredient": "Lemon juice",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "to taste"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Grill lamb chops over medium heat to desired doneness.",
+      "In a food processor, combine mint, garlic, olive oil, lemon juice, and salt to make the pesto.",
+      "Serve lamb chops with mint pesto drizzled over the top."
+    ],
+    "createdBy": null
+}
+  

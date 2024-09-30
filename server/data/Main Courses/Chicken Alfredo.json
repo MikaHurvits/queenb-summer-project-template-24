@@ -1,0 +1,44 @@
+{
+    "title": "Chicken Alfredo",
+    "categories": ["Main Courses"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAzGiwuNmnGekljnoAha5RrhJzpf4LaJtNg&s",
+    "ingredients": [
+      {
+        "ingredient": "Chicken breasts",
+        "quantity": "2, boneless and skinless"
+      },
+      {
+        "ingredient": "Fettuccine",
+        "quantity": "12 oz"
+      },
+      {
+        "ingredient": "Heavy cream",
+        "quantity": "1 cup"
+      },
+      {
+        "ingredient": "Parmesan cheese",
+        "quantity": "1 cup, grated"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "2 cloves, minced"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+      }
+    ],
+    "totalTime": 30,
+    "instructions": [
+      "Cook fettuccine according to package instructions.",
+      "In a pan, cook chicken in olive oil until golden and cooked through.",
+      "Remove chicken and set aside.",
+      "In the same pan, cook garlic until fragrant.",
+      "Add heavy cream and Parmesan cheese, and stir until smooth.",
+      "Slice the chicken and add it to the sauce.",
+      "Toss in the cooked fettuccine.",
+      "Serve warm."
+    ],
+    "createdBy": null
+}
+  

@@ -1,0 +1,48 @@
+{
+    "title": "Cobb Salad",
+    "categories": ["Salads"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT10xhJh4zaJdy2BGKsZyF-Ycln09xWv1rZow&s",
+    "ingredients": [
+      {
+        "ingredient": "Romaine lettuce",
+        "quantity": "2 cups, chopped"
+      },
+      {
+        "ingredient": "Cooked chicken breast",
+        "quantity": "1 cup, diced"
+      },
+      {
+        "ingredient": "Hard-boiled eggs",
+        "quantity": "2, chopped"
+      },
+      {
+        "ingredient": "Bacon",
+        "quantity": "4 strips, cooked and crumbled"
+      },
+      {
+        "ingredient": "Avocado",
+        "quantity": "1, diced"
+      },
+      {
+        "ingredient": "Cherry tomatoes",
+        "quantity": "1/2 cup, halved"
+      },
+      {
+        "ingredient": "Blue cheese",
+        "quantity": "1/4 cup, crumbled"
+      },
+      {
+        "ingredient": "Ranch dressing",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "totalTime": 20,
+    "instructions": [
+      "In a large bowl, arrange chopped romaine lettuce.",
+      "Top with diced chicken, chopped eggs, crumbled bacon, avocado, cherry tomatoes, and blue cheese.",
+      "Drizzle with ranch dressing before serving.",
+      "Serve immediately."
+    ],
+    "createdBy": null
+}
+  

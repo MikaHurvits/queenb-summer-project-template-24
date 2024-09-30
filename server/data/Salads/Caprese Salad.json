@@ -1,0 +1,36 @@
+{
+    "title": "Caprese Salad",
+    "categories": ["Salads"],
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAJn-tNuL4Cz3XbvxXiDX8JmEeWH_r7GwVXA&s",
+    "ingredients": [
+      {
+        "ingredient": "Tomatoes",
+        "quantity": "3, sliced"
+      },
+      {
+        "ingredient": "Fresh mozzarella",
+        "quantity": "200g, sliced"
+      },
+      {
+        "ingredient": "Fresh basil leaves",
+        "quantity": "1/4 cup"
+      },
+      {
+        "ingredient": "Balsamic glaze",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "ingredient": "Olive oil",
+        "quantity": "2 tablespoons"
+      }
+    ],
+    "totalTime": 10,
+    "instructions": [
+      "Arrange tomato and mozzarella slices on a plate, alternating them.",
+      "Tuck fresh basil leaves between the slices.",
+      "Drizzle with balsamic glaze and olive oil.",
+      "Serve immediately."
+    ],
+    "createdBy": null
+}
+  

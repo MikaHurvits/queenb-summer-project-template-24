@@ -18,7 +18,7 @@
   color: #ffffff;
 }
 
-.searchAndFilter {
+.searchBar {
   background-color: #ff5943;
   padding: 5px 50px 5px 50px;
   display: flex;
@@ -71,13 +71,13 @@
 .contentContainer {
   width: 90%; /* Adjust the width of the content to take more space */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: flex-start;
   padding-top: 20px;
 }
 
 .footer {
-  background-color: #4e1001; /* Purple color */
+  background-color: #4e1001;
   color: white;
   position: fixed;
   width: 100%;
@@ -91,3 +91,22 @@ input {
   width: 250px;
 }
 
+.logoutButton {
+  margin-right: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ff5943; /* Same color as .addButton */
+  background-color: #ffffff; /* Same background as .addButton */
+  border: 1px #0c0c0b solid; /* Same border as .addButton */
+  border-radius: 6px; /* Same border radius as .addButton */
+  width: 100px; /* Make the button wider */
+  padding: 12px 20px; /* Adjust padding for a larger button */
+  font-size: 16px; /* Increase font size for a larger button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Optional: Change the hover color */
+.logoutButton:hover {
+  background-color: #ff5943; /* Change to desired hover background color */
+  color: #ffffff; /* Change text color on hover */
+}

@@ -53,7 +53,8 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
     };
 
 
-    const addIngredient = async () => {
+    const addIngredient = async (e) => {
+        e.preventDefault();
         if (!selectedIngredient && !customIngredient) {
             setError('Ingredient is required');
             return;

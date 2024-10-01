@@ -1,7 +1,7 @@
 import './Upload.css';
 import React, { useState } from 'react';
 import CategorySelection from '../../components/categorySelection/categorySelection';
-
+import axios from 'axios';
 
 import IngredientsBox from '../../components/IngredientsBox/IngredientsBox';
 
@@ -17,14 +17,14 @@ const Upload = () => {
 
     const [instructions, setInstructions] = useState('');
 
-    const [image, setImage] = useState('');
+    const [imageUrl, setImageUrl] = useState('');
 
     const [error, setError] = useState('');
 
     const [successMessage, setSuccessMessage] = useState('');
 
 // temporary
-const imageUrl = '';
+// const imageUrl = '';
 const createdBy = 'Mika check';
 
 
@@ -33,7 +33,7 @@ const createdBy = 'Mika check';
       };
 
       const handleImageChange = (e) => {
-        setImage(e.target.files[0]);
+        setImageUrl(e.target.files[0]);
     };
 
     const handleSubmit = async (e) => {
@@ -45,32 +45,67 @@ const createdBy = 'Mika check';
         formData.append('title', title);
         formData.append('category', selectedCategory);
         formData.append('totalTime', totalTime);
-        formData.append('ingredientsList', JSON.stringify(ingredientsList)); // Convert to JSON string
+        formData.append('ingredientsList', JSON.stringify(ingredientsList));
         formData.append('instructions', instructions);
-        formData.append('image', image); // Use the file object directly
-        
+        formData.append('imageUrl', imageUrl); 
+        formData.append('createdBy', createdBy); 
+
+
+        const recipe = {
+             title: title,
+             category: selectedCategory,
+             totalTime: totalTime,
+             ingredientsList: ingredientsList,
+             instructions: instructions,
+             imageUrl: imageUrl,
+             createdBy: createdBy,
+        };
+    
+
         console.log(formData);
+        // Log form data to console
+        for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+        }
+
+        console.log(typeof formData); // This will print "object"
+        console.log(typeof JSON.stringify(formData));
+        console.log(`${process.env.REACT_APP_API_URL}/upload`);
 
         try {
-            const response = await fetch('/api/upload', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/upload`, {
                 method: 'POST',
-                body: formData, // Send FormData directly
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData), // Send FormData directly
             });
+            // const response = await axios.post(`${process.env.REACT_APP_API_URL}/upload`, recipe, {
+            //     headers: {
+            //         // 'Content-Type': 'multipart/form-data',
+            //         'Content-Type': 'application/json',
+            //     }
+            // });
+
+
+            console.log(response);
+
+            if (!response.ok){
+                const errorText = await response.text();
+                console.error('Upload failed:', errorText);
+                setError('Upload failed: ' + errorText);
+                return;
+            }
+
     
             const json = await response.json();
-            if (response.ok) {
-                setSuccessMessage('Upload successful!');
-                // Clear form fields
-                setCategory('');
-                setTitle('');
-                setTotalTime('');
-                setIngredientsList([]);
-                setInstructions('');
-                setImage(null); // Reset image state
-            } else {
-                console.error('Upload failed');
-                setError(json.error || 'Upload failed');
-            }
+            setSuccessMessage('Upload successful!');
+            // Clear form fields
+            setCategory('');
+            setTitle('');
+            setTotalTime('');
+            setIngredientsList([]);
+            setInstructions('');
+            setImageUrl('');
+
         } catch (error) {
             console.error('Error uploading data:', error);
             setError(error.message || 'Error uploading data');
@@ -204,8 +239,8 @@ const createdBy = 'Mika check';
                     type="text"
                     name="imageUrl"
                     placeholder="Enter image URL"
-                    onChange={(e) => setImage(e.target.value)}
-                    value={image}
+                    onChange={(e) => setImageUrl(e.target.value)}
+                    value={imageUrl}
                 />
             </div>
 

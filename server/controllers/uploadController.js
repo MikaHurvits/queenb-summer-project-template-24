@@ -11,20 +11,37 @@ const Ingredient = require('../models/IngredientModel');
 const createRecipe = async (req, res) => {
 
     try{
-        const { title, categories, imageUrl, ingredients, totalTime, instructions, createdBy } = req.body;
+        const { title, category, imageUrl, ingredientsList, totalTime, instructions, createdBy } = req.body;
     
-        const recipe = await Recipe.create({ title, categories, imageUrl, ingredients, totalTime, instructions, createdBy });
-
-        const categoryName = req.body.Category;
-        await 
-        Category.findOneAndUpdate(categoryName, {
-            $push: {recipes: recipe._id}
+        const recipe = await Recipe.create({
+            title,
+            categories: category, // Make sure this matches your model
+            imageUrl,
+            ingredients: ingredientsList, // Ensure this matches your model
+            totalTime,
+            instructions,
+            createdBy,
         });
+
+        // Optionally update ingredients
+        for (const ingredient of ingredientsList) {
+            await Ingredient.findOneAndUpdate(
+                { name: ingredient.name }, // Adjust this based on your ingredient model
+                { $push: { recipes: recipe._id } } // Assuming you want to track which recipes use this ingredient
+            );
+        }
+
+
+        // const categoryName = req.body.Category;
+        // await 
+        // Category.findOneAndUpdate(categoryName, {
+        //     $push: {recipes: recipe._id}
+        // });
         res.status(200).json({message: 'recipe added and Category updated', recipe:recipe});
 }
 
 catch(error){
-    res.status(400).json({error: error.message})
+    res.status(500).json({error: error.message})
 }
 
 

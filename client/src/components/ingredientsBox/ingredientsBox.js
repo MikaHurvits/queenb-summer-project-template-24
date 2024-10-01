@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 
 const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError}) => {
 
@@ -29,13 +29,13 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
 
     const handleQuantityChange = async (event) => {
         const value = event.target.value;
-        if (value < 0) {
-            setError('Quantity cannot be negative');
-        } else if (value === '') {
-            setError('Quantity is required');
-        } else {
-            setError('');
-        }
+        // if (value < 0) {
+        //     setError('Quantity cannot be negative');
+        // } else if (value === '') {
+        //     setError('Quantity is required');
+        // } else {
+        //     setError('');
+        // }
         setSelectedQuantity(value);
     };
 
@@ -63,15 +63,17 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
             setError('Quantity is required');
             return;
         }
-        if (!selectedUnit && !customUnit) {
-            setError('Unit is required');
-            return;
-        }
+        // if (!selectedUnit && !customUnit) {
+        //     setError('Unit is required');
+        //     return;
+        // }
 
         const ingredient = selectedIngredient === 'Other' ? customIngredient : selectedIngredient;
         const unit = selectedUnit === 'Other' ? customUnit : selectedUnit;
-        const quantity = selectedQuantity.toString(); // Convert quantity to string if needed
-        const newIngredient = { ingredient, quantity, unit};
+        //const quantity = selectedQuantity.toString(); // Convert quantity to string if needed
+        const quantity = selectedQuantity;
+        const _id = "66f08903c2d0b395b32bd75f"
+        const newIngredient = { ingredient, quantity, _id}
         
         setIngredientsList([...ingredientsList, newIngredient]);
 
@@ -100,7 +102,7 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
                 <label>Ingredients List: </label>
                 <div className='choiceContainer'> 
                 <select placeholder="Ingredient " label="Ingredient" value={selectedIngredient} onChange={handleIngredientChange} className='selectBox'>
-                    <option style={{color: 'red'}} value="" disabled> Select Ingredient </option>
+                    <option value="" disabled> Select Ingredient </option>
                     {predefinedIngredients.map((ingredient, index) => (
                         <option key={index} value={ingredient}> {ingredient} </option>
                     ))}
@@ -117,8 +119,18 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
                     />
                 )}
 
-                
                 <input
+                    className='smallTextBox'
+                    type="text"
+                    label="Quantity"
+                    placeholder="Quantity"
+                    value={selectedQuantity}
+                    onChange={handleQuantityChange}
+                />
+
+
+
+                {/* <input
                     className='smallTextBox'
                     type="number"
                     label="Quantity"
@@ -127,8 +139,7 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
                     onChange={handleQuantityChange}
                 />
  
-                
-
+            
                 <select value={selectedUnit} onChange={handleUnitChange} className='selectBox'>
                     <option value="" disabled> Select Unit</option>
                     {unitsList.map((unit, index) => (
@@ -143,7 +154,7 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
                         value={customUnit}
                         onChange={handleCustomUnitChange}
                     />
-                )}
+                )} */}
 
 
 
@@ -157,7 +168,8 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
                 <div className='ingredientsList'>
                     {ingredientsList.map((item, index) => (
                         <div key={index} className='ingredientItem'>    
-                            <p>{item.quantity} {item.unit} of {item.ingredient} 
+                            {/* <p>{item.quantity} {item.unit} of {item.ingredient}  */}
+                            <p>{item.quantity} of {item.ingredient} 
                                 <button className="removeButton" onClick={() => removeIngredient(index)}>Remove</button>
                             </p>
                         </div>

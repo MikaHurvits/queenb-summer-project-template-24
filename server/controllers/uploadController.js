@@ -13,6 +13,9 @@ const createRecipe = async (req, res) => {
     try{
         const { title, category, imageUrl, ingredientsList, totalTime, instructions, createdBy } = req.body;
     
+        console.log('Request Body:', req.body);
+
+        
         const recipe = await Recipe.create({
             title,
             categories: category, // Make sure this matches your model
@@ -22,6 +25,8 @@ const createRecipe = async (req, res) => {
             instructions,
             createdBy,
         });
+
+        
 
         // Optionally update ingredients
         for (const ingredient of ingredientsList) {

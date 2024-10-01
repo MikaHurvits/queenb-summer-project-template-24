@@ -12,15 +12,10 @@ const Upload = () => {
     const [title, setTitle] = useState('');
     const [selectedCategory, setCategory] = useState('');
     const [totalTime, setTotalTime] = useState('');
-
     const [ingredientsList, setIngredientsList] = useState([]);
-
     const [instructions, setInstructions] = useState('');
-
     const [imageUrl, setImageUrl] = useState('');
-
     const [error, setError] = useState('');
-
     const [successMessage, setSuccessMessage] = useState('');
 
 // temporary
@@ -42,9 +37,6 @@ const validateForm = () => {
         setCategory(event.target.value); 
       };
 
-      const handleImageChange = (e) => {
-        setImageUrl(e.target.files[0]);
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -71,36 +63,79 @@ const validateForm = () => {
         formData.append('imageUrl', imageUrl); 
         formData.append('createdBy', createdBy); 
 
+        console.log(ingredientsList);
+        console.log(JSON.stringify(ingredientsList));
 
-        const recipe = {
-             title: title,
-             category: selectedCategory,
-             totalTime: totalTime,
-             ingredientsList: ingredientsList,
-             instructions: instructions,
-             imageUrl: imageUrl,
-             createdBy: createdBy,
-        };
+        const ingredientsListEXP =                 [{
+            "ingredient": "Mini taco shells",
+            "quantity": "12",
+            "_id": "66f08903c2d0b395b32bd75c"
+        },
+        {
+            "ingredient": "Ground beef",
+            "quantity": "1/2 lb, cooked",
+            "_id": "66f08903c2d0b395b32bd75d"
+        },
+        {
+            "ingredient": "Shredded cheese",
+            "quantity": "1/2 cup",
+            "_id": "66f08903c2d0b395b32bd75e"
+        },
+        {
+            "ingredient": "Shredded lettuce",
+            "quantity": "1 cup",
+            "_id": "66f08903c2d0b395b32bd75f"
+        },
+        {
+            "ingredient": "Diced tomatoes",
+            "quantity": "1/2 cup",
+            "_id": "66f08903c2d0b395b32bd760"
+        },
+        {
+            "ingredient": "Sour cream",
+            "quantity": "1/4 cup",
+            "_id": "66f08903c2d0b395b32bd761"
+        }
+    ]
+
+
+        const recipe = {"title": title,
+            "categories": [
+                selectedCategory
+            ],
+            "imageUrl": imageUrl,
+            "ingredients": ingredientsList,
+
+            "totalTime": totalTime,
+            "instructions": [
+                instructions
+            ],
+            "createdBy": null }
     
 
-        console.log(formData);
-        // Log form data to console
-        for (let [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
+        // console.log(formData);
+        // // Log form data to console
+        // for (let [key, value] of formData.entries()) {
+        //     console.log(`${key}: ${value}`);
+        // }
 
-        console.log(typeof formData); // This will print "object"
-        console.log('Form Data:', formData);
-        console.log(typeof JSON.stringify(formData));
-        console.log(`${process.env.REACT_APP_API_URL}/upload`);
+        // console.log(typeof formData); // This will print "object"
+        // console.log('Form Data:', formData);
+        // console.log(typeof JSON.stringify(formData));
+        // console.log(`${process.env.REACT_APP_API_URL}/upload`);
 
-        try {
 
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/upload`, formData, {
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            });
+
+        axios.post(`${process.env.REACT_APP_API_URL}/upload`, recipe)
+        .then(response => console.log(response))
+        .catch(err => console.log(err))
+        // try {
+
+        //     const response = await axios.post(`${process.env.REACT_APP_API_URL}/upload`, formData, {
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         }
+        //     });
 
 
 
@@ -120,14 +155,14 @@ const validateForm = () => {
             // });
 
 
-            console.log(response);
+            // console.log(response);
 
-            if (!response.ok){
-                const errorText = await response.text();
-                console.error('Upload failed:', errorText);
-                setError('Upload failed: ' + errorText);
-                return;
-            }
+            // if (!response.ok){
+            //     const errorText = await response.text();
+            //     console.error('Upload failed:', errorText);
+            //     setError('Upload failed: ' + errorText);
+            //     return;
+            // }
 
     
             // const json = await response.json();
@@ -140,14 +175,13 @@ const validateForm = () => {
             setInstructions('');
             setImageUrl('');
 
-        } catch (error) {
-            console.error('Error uploading data:', error);
-            setError(error.message || 'Error uploading data');
-        }
+        // } catch (error) {
+        //     console.error('Error uploading data:', error);
+        //     setError(error.message || 'Error uploading data');
+        // }
     };
     
-    // Change the button type to submit
-    //<button type="submit">Submit form</button>
+
 
    
     // const handleSubmit = async (e) => {

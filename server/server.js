@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const multer = require('multer');
 const RecipeManager = require('./databaseManager/recipeManager');
 
 const recipesRoutes = require('./routes/recipes')
@@ -22,14 +21,17 @@ const app = express();
 
 
 // Middleware
-app.use(express.json())
+
 app.use(cors({
   origin: process.env.CLIENT_URL
 }));
+
+app.use(express.json())
+
+
 // app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-  console.log('Requested path:', req.path); //delete this
   console.log(req.path, req.method)
   next()
 })

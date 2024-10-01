@@ -11,6 +11,8 @@ const router = express.Router();
 router.post('/', async (req, res) => {
     const { title, categories, imageUrl, ingredients, totalTime, instructions, createdBy } = req.body;
 
+    console.log('Request Body:', req.body);
+
     try{
         const recipe = await Recipe.create({ title, categories, imageUrl, ingredients, totalTime, instructions, createdBy });
         res.status(200).json(recipe);
@@ -19,7 +21,7 @@ router.post('/', async (req, res) => {
 
     }
     catch(error){
-        res.status(800).json({error: error.message})
+        res.status(400).json({error: error.message})
         return 
 
     }

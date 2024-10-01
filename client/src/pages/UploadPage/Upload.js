@@ -27,6 +27,16 @@ const Upload = () => {
 // const imageUrl = '';
 const createdBy = 'Mika check';
 
+const validateForm = () => {
+    if (!title) return 'Title is required';
+    if (!selectedCategory) return 'Category is required';
+    if (!totalTime) return 'Total time is required';
+    if (!ingredientsList.length) return 'Ingredients list is required';
+    if (!instructions) return 'Instructions are required';
+    if (!imageUrl) return 'Image URL is required';
+    return null;
+};
+
 
     const handleCategoryChange = (event) => {
         setCategory(event.target.value); 
@@ -40,6 +50,17 @@ const createdBy = 'Mika check';
         e.preventDefault();
         setError(''); 
         setSuccessMessage(''); 
+
+
+    const validationError = validateForm();
+        if (validationError) {
+            setError(validationError);
+            return;
+        } else {
+            console.log('form data validated on client side');
+        }
+        
+
     
         const formData = new FormData();
         formData.append('title', title);
@@ -69,15 +90,28 @@ const createdBy = 'Mika check';
         }
 
         console.log(typeof formData); // This will print "object"
+        console.log('Form Data:', formData);
         console.log(typeof JSON.stringify(formData));
         console.log(`${process.env.REACT_APP_API_URL}/upload`);
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/upload`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData), // Send FormData directly
+
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/upload`, formData, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
             });
+
+
+
+            //const response = await fetch(`${process.env.REACT_APP_API_URL}/upload`, {
+            //    method: 'POST',
+                // headers: { 'Content-Type': 'multipart/form-data' },
+                // headers: { 'Content-Type': 'application/json' },
+                // body: JSON.stringify(formData),
+            //    body: formData,
+            //});
+
             // const response = await axios.post(`${process.env.REACT_APP_API_URL}/upload`, recipe, {
             //     headers: {
             //         // 'Content-Type': 'multipart/form-data',
@@ -96,7 +130,7 @@ const createdBy = 'Mika check';
             }
 
     
-            const json = await response.json();
+            // const json = await response.json();
             setSuccessMessage('Upload successful!');
             // Clear form fields
             setCategory('');

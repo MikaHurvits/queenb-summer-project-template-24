@@ -1,20 +1,12 @@
-
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError}) => {
 
     const predefinedIngredients = ['Flour', 'Sugar', 'Butter', 'Eggs'];
-    const unitsList = ['grams', 'cups', 'tablespoons', 'teaspoons'];
-
     const [selectedIngredient, setSelectedIngredient] = useState('');
     const [customIngredient, setCustomIngredient] = useState('');
-    
     const [selectedQuantity, setSelectedQuantity] = useState('');
     
-    const [selectedUnit, setSelectedUnit] = useState('');
-    const [customUnit, setCustomUnit] = useState('');
-
     const handleIngredientChange = async (event) => {
         const value = event.target.value;
         setSelectedIngredient(value);
@@ -29,29 +21,8 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
 
     const handleQuantityChange = async (event) => {
         const value = event.target.value;
-        // if (value < 0) {
-        //     setError('Quantity cannot be negative');
-        // } else if (value === '') {
-        //     setError('Quantity is required');
-        // } else {
-        //     setError('');
-        // }
         setSelectedQuantity(value);
     };
-
-
-    const handleUnitChange = async (event) => {
-        const value = event.target.value;
-        setSelectedUnit(value);
-        if (value !== 'Other') {
-            setCustomUnit('');
-        }
-    };
-
-    const handleCustomUnitChange = async (event) => {
-        setCustomUnit(event.target.value);
-    };
-
 
     const addIngredient = async (e) => {
         e.preventDefault();
@@ -63,16 +34,9 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
             setError('Quantity is required');
             return;
         }
-        // if (!selectedUnit && !customUnit) {
-        //     setError('Unit is required');
-        //     return;
-        // }
-
         const ingredient = selectedIngredient === 'Other' ? customIngredient : selectedIngredient;
-        const unit = selectedUnit === 'Other' ? customUnit : selectedUnit;
-        //const quantity = selectedQuantity.toString(); // Convert quantity to string if needed
         const quantity = selectedQuantity;
-        const _id = "66f08903c2d0b395b32bd75f"
+        const _id = "66f08903c2d0b395b32bd75f" //currently fixed but has to be set dynamically later on 
         const newIngredient = { ingredient, quantity, _id}
         
         setIngredientsList([...ingredientsList, newIngredient]);
@@ -81,8 +45,6 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
         setSelectedIngredient('');
         setCustomIngredient('');
         setSelectedQuantity('');
-        setSelectedUnit('');
-        setCustomUnit('');
         setError('');
 
     };
@@ -95,10 +57,7 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
 
 
     return (
-    
-
                 <div className='ingredientsContainer'>
-                
                 <label>Ingredients List: </label>
                 <div className='choiceContainer'> 
                 <select placeholder="Ingredient " label="Ingredient" value={selectedIngredient} onChange={handleIngredientChange} className='selectBox'>
@@ -128,47 +87,14 @@ const IngredientsBox  = ({ingredientsList, setIngredientsList, error, setError})
                     onChange={handleQuantityChange}
                 />
 
-
-
-                {/* <input
-                    className='smallTextBox'
-                    type="number"
-                    label="Quantity"
-                    placeholder="Quantity"
-                    value={selectedQuantity}
-                    onChange={handleQuantityChange}
-                />
- 
-            
-                <select value={selectedUnit} onChange={handleUnitChange} className='selectBox'>
-                    <option value="" disabled> Select Unit</option>
-                    {unitsList.map((unit, index) => (
-                        <option key={index} value={unit}>{unit}</option>
-                    ))}
-                    <option value="Other">Other</option>
-                </select>
-                {selectedUnit === "Other" && (
-                    <input
-                        type="text"
-                        placeholder="Enter Unit"
-                        value={customUnit}
-                        onChange={handleCustomUnitChange}
-                    />
-                )} */}
-
-
-
-
                 <button onClick={addIngredient}>Add Ingredient</button>
                 {error && <p>{error}</p>}
 
-                {/* </div> */}
                 </div>
 
                 <div className='ingredientsList'>
                     {ingredientsList.map((item, index) => (
                         <div key={index} className='ingredientItem'>    
-                            {/* <p>{item.quantity} {item.unit} of {item.ingredient}  */}
                             <p>{item.quantity} of {item.ingredient} 
                                 <button className="removeButton" onClick={() => removeIngredient(index)}>Remove</button>
                             </p>

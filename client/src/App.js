@@ -31,7 +31,6 @@ function App() {
               <>
                 <Link to="/" className={styles.appLink}>Home</Link>
                 <Link to="/upload" className={styles.addButton}>Upload</Link> 
-                <button className={styles.addButton}>Add Recipe</button>
                 <Link to="/saved" className={styles.appLink}>Saved🤍</Link>
                 <button onClick={handleLogout} className={styles.appLink}>Logout</button>
               </>
@@ -39,9 +38,6 @@ function App() {
               <>
                 <Link to="/login" className={styles.appLink}>Login</Link>
                 <Link to="/signup" className={styles.appLink}>Signup</Link>
-                {/* only or testing */}
-                {/* <button className={styles.addButton}>Add Recipe</button> */}
-                <Link to="/upload" className={styles.addButton}>Upload</Link> 
               </>
             )}
           </nav>

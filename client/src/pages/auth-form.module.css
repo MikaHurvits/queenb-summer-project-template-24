@@ -51,7 +51,7 @@
 }
 
 .authForm button[disabled] {
-    background-color: #ccc;
+    background-color: #d44444;
     cursor: not-allowed;
 }
 

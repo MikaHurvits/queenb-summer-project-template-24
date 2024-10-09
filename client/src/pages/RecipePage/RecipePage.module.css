@@ -60,3 +60,22 @@
     padding-top: 20px;
     padding-bottom: 50px;
   }
+
+  .saveButton {
+    background-color: #e55340; /* Set background to red */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth scaling and color transition */
+    padding: 10px; /* Adjust padding for a moderate size */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 24px; /* Set font size for heart icon */
+  }
+  
+  .saveButton:hover {
+    transform: scale(1.1);
+    background-color: darkred; /* Darker red on hover */
+  }
+  
+  .saveButton:focus {
+    outline: none; /* Remove outline on focus */
+  }

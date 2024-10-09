@@ -1,4 +1,5 @@
 const User = require('../models/userModel');
+const Recipe = require('../models/RecipeModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const validator = require('validator');
@@ -92,4 +93,65 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { signupUser, loginUser };
+// ** Save Recipe Controller **
+const saveRecipe = async (req, res) => {
+  const { recipeTitle } = req.body;
+  const userId = req.user.id;
+
+  const recipe = await Recipe.findOne({ title: recipeTitle });
+
+  if (!recipe) {
+    return res.status(404).json({ error: 'Recipe not found' });
+  }
+  const recipeId = recipe._id;
+
+  if (!userId || !recipeId) {
+    return res.status(400).json({ error: 'User ID and Recipe ID are required' });
+  }
+
+  try {
+    // Find user and update saved recipes
+    const user = await User.findById(userId);
+    
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // Check if recipe is already saved
+    if (user.saved.includes(recipeId)) {
+      return res.status(400).json({ error: 'Recipe already saved' });
+    }
+
+    // Save the recipe
+    user.saved.push(recipeId);
+    await user.save();
+
+    res.status(200).json({ message: 'Recipe saved successfully' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+// ** Fetch Saved Recipes Controller **
+const fetchSavedRecipes = async (req, res) => {
+  //const { userId } = req.params; // Assuming userId is passed as a URL parameter
+  const userId = req.user.id;
+
+  if (!userId) {
+    return res.status(400).json({ error: 'User ID is required' });
+  }
+
+  try {
+    // Find user and populate saved recipes
+    const user = await User.findById(userId).populate('saved');
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.status(200).json(user.saved);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+module.exports = { signupUser, loginUser, saveRecipe, fetchSavedRecipes };

@@ -7,6 +7,8 @@ const searchBarRoutes = require('./routes/searchBar');
 const recipesRoutes = require('./routes/recipes')
 const recipesFilterRoutes = require('./routes/recipesFilterRoute')
 const userRoutes = require('./routes/user');
+const requireAuth = require('./middleware/requireAuth');
+const nonMandatoryAuth = require('./middleware/nonMandatoryAuth');
 
 dotenv.config();
 
@@ -30,13 +32,13 @@ app.use((req, res, next) => {
 })
 
 // Routes
-//app.use('/api/searchBar', nonMandatoryAuth, searchBarRoutes)
-app.use('/api/searchBar', searchBarRoutes)
+//app.use('/api/searchBar', requireAuth, searchBarRoutes)
+app.use('/api/searchBar', nonMandatoryAuth, searchBarRoutes)
 app.use('/api/recipes', recipesRoutes)
-app.use('/api/user', userRoutes)
+//app.use('/api/user', userRoutes)
 // app.use('/api/filter', recipesFilterRoutes) //todo - check what to keep
-
-app.use('/api/filter',recipesFilterRoutes);
+app.use('/api/filter', recipesFilterRoutes) 
+app.use('/api/user', nonMandatoryAuth, userRoutes)
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
